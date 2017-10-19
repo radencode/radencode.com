@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-  entry: "./src/components/client.jsx",
+  entry: "./src/components/app.jsx",
   module: {
     loaders: [
       {
@@ -11,18 +11,26 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-2'],
           plugins: ['react-html-attrs', 'transform-decorators-legacy']
         }
-      }
+      },
+      {
+        test: /\.sass?$/,
+        loader: 'style-loader!css-loader!sass-loader'
+      },
+      {
+        test: /\.(jpe?g|png|otf)$/,
+        loader: 'file-loader'
+      },
     ],
   },
   resolve: {
     modules: [
-			path.resolve('./src/components'),
+			path.resolve('./src'),
       path.resolve('./node_modules')
     ]
   },  
   output: {
     path: path.resolve(__dirname, "app"),
-    filename: "bundle.js",
+    filename: "app.bundle.js",
   },
   devServer: {
     contentBase: path.resolve(__dirname, "app"),

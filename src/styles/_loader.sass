@@ -1,0 +1,114 @@
+#loader-backgound
+	width: 100%
+	height: 100vh
+	background-color: $dark-blue
+	background-image: url("../images/bg_1024.jpg")
+	background-repeat: no-repeat
+	backround-size: cover
+	background-position: center
+
+	#loader
+		width: 200px
+		height: auto
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		
+		#loader-icon
+			width: 14px
+			height: 30px
+			margin: auto
+			position: relative
+			.loading-bar
+				background-color: $white
+				width: 2px
+				float: left
+				position: absolute
+				bottom: 0				
+				&.left
+					height: 23px
+					left: 0
+					animation: loading-left 1.5s linear
+					animation-iteration-count: 2
+				&.middle
+					height: 30px
+					left: 6px
+					animation: loading-middle 1.5s linear
+					animation-iteration-count: 2
+				&.right
+					height: 27px
+					left: 12px
+					animation: loading-right 1.5s linear
+					animation-iteration-count: 2
+				
+				@keyframes loading-left
+					0% 
+						height: 23px
+					20%
+						height: 30px
+					50%
+						height: 23px
+					80%
+					 	height: 30px	
+					100%
+						height: 23px
+				@keyframes loading-middle
+					0% 
+						height: 30px
+					20%
+						height: 20px
+					50%
+						height: 30px
+					80%
+					 	height: 20px	
+					100%
+						height: 30px
+				@keyframes loading-right
+					0% 
+						height: 27px
+					20%
+						height: 23px
+					50%
+						height: 27px
+					80%
+					 	height: 23px	
+					100%
+						height: 27px
+
+		h1
+			font-family: Esphimere-Bold
+			font-size: 20px
+			letter-spacing: 0.4em
+			text-transform: uppercase
+			color: $gray
+			text-align: center
+			margin: 25px 0
+			.highlight
+				color: $yellow
+
+		#loading-progress
+			background-color: $light-blue
+			width: 150px
+			height: 1px
+			margin: auto
+			#loading-completed
+				background-color: $blue
+				width: 100%
+				height: 1px
+				animation: load 3s ease-in
+
+			@keyframes load
+				0%
+					width: 0	
+				100%
+					width: 100%
+
+@media screen and (min-width: 1025px)
+	#loader-backgound
+		background-image: url("../images/bg_1920.jpg")
+
+@media screen and (min-width: 1921px)
+	#loader-backgound
+		background-image: url("../images/bg_3800.jpg")
+	
