@@ -1,5 +1,6 @@
-const path = require('path');
-module.exports = {
+import { resolve } from 'path'
+
+export default {
   entry: "./src/components/app.jsx",
   module: {
     loaders: [
@@ -27,16 +28,16 @@ module.exports = {
   },
   resolve: {
     modules: [
-			path.resolve('./src'),
-      path.resolve('./node_modules')
+			resolve('./src'),
+      resolve('./node_modules')
     ]
   },  
   output: {
-    path: path.resolve(__dirname, "app"),
+    path: resolve(__dirname, "app"),
     filename: "app.bundle.js",
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "src"),
+    contentBase: resolve(__dirname, "src"),
     compress: true,
     inline: true,
   },
