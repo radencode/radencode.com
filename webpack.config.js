@@ -18,7 +18,10 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|otf)$/,
-        loader: 'file-loader'
+        loader: 'file-loader',
+        options: {
+          outputPath: 'assets/'
+        }
       },
     ],
   },
@@ -33,7 +36,7 @@ module.exports = {
     filename: "app.bundle.js",
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "app"),
+    contentBase: path.resolve(__dirname, "src"),
     compress: true,
     inline: true,
   },
