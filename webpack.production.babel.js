@@ -1,8 +1,8 @@
-import CleanWebpackPlugin from 'clean-webpack-plugin'
-import UglifyJSPlugin from 'uglifyjs-webpack-plugin'
-import merge from 'webpack-merge'
-import config from './webpack.config.babel.js'
-import webpack from 'webpack'
+import CleanWebpackPlugin from 'clean-webpack-plugin';
+import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
+import merge from 'webpack-merge';
+import config from './webpack.config.babel.js';
+import webpack from 'webpack';
 
 export default merge(config, {
     plugins: [
@@ -14,6 +14,11 @@ export default merge(config, {
         }),
         new webpack.optimize.CommonsChunkPlugin({
           name: 'runtime'
-        })      
+        }),
+        new webpack.DefinePlugin({
+          'process.env': {
+            'NODE_ENV': JSON.stringify('production')
+          }
+        })     
     ]
-})
+});

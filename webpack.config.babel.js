@@ -1,6 +1,6 @@
-import { resolve } from 'path'
-import WebpackProgressBarPlugin from 'progress-bar-webpack-plugin'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
+import { resolve } from 'path';
+import WebpackProgressBarPlugin from 'progress-bar-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
     entry: {
@@ -28,16 +28,18 @@ export default {
             },
             {
                 test: /\.(jpe?g|png|gif)$/,
-                loader: 'file-loader',
+                loader: 'url-loader',
                 options: {
-                    name: 'assets/images/[name]-[hash].[ext]'
+                    name: './assets/images/[name]-[hash].[ext]',
+                    limit: 100000
                 }
             },
             {
                 test: /\.(woff|otf|woff2|ttf)$/,
-                loader: 'file-loader',
+                loader: 'url-loader',
                 options: {
-                    name: 'assets/fonts/[name]-[hash].[ext]'
+                    name: './assets/fonts/[name]-[hash].[ext]',
+                    limit: 100000
                 }
             }
         ]
@@ -58,4 +60,4 @@ export default {
             filename: 'index.html'
         })  
     ]
-}
+};

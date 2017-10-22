@@ -4,7 +4,7 @@
 	background-color: $dark-blue
 	background-image: url("../images/bg_1024.jpg")
 	background-repeat: no-repeat
-	backround-size: cover
+	background-size: cover
 	background-position: center
 
 	#loader
@@ -20,6 +20,17 @@
 			height: 30px
 			margin: auto
 			position: relative
+			animation: fadeup 1s forwards
+			animation-delay: 3s
+
+			@keyframes fadeup
+				0%
+					top: 0
+					opacity: 1
+				100%
+					top: -50px
+					opacity: 0
+
 			.loading-bar
 				background-color: $white
 				width: 2px
@@ -80,10 +91,20 @@
 			font-family: Esphimere-Bold
 			font-size: 20px
 			letter-spacing: 0.4em
+			line-height: 30px
 			text-transform: uppercase
 			color: $gray
 			text-align: center
 			margin: 25px 0
+			animation: fade 1s forwards
+			animation-delay: 3s
+
+			@keyframes fade
+				0%
+					opacity: 1
+				100%
+					opacity: 0
+
 			.highlight
 				color: $yellow
 
@@ -92,11 +113,23 @@
 			width: 150px
 			height: 1px
 			margin: auto
+			position: relative
+			animation: fadedown 1s forwards
+			animation-delay: 3s
+
+			@keyframes fadedown
+				0%
+					top: 0
+					opacity: 1
+				100%
+					top: 50px
+					opacity: 0
+
 			#loading-completed
 				background-color: $blue
-				width: 100%
+				width: 0
 				height: 1px
-				animation: load 3s ease-in
+				animation: load 3s forwards
 
 			@keyframes load
 				0%

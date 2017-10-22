@@ -1,5 +1,5 @@
-import merge from 'webpack-merge'
-import config from './webpack.config.babel.js'
+import merge from 'webpack-merge';
+import config from './webpack.config.babel.js';
 
 export default merge(config ,{
     devtool: 'inline-source-map',
@@ -12,4 +12,4 @@ export default merge(config ,{
             chunkModules: false
         }
     }
-})
+});
