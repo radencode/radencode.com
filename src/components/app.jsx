@@ -3,10 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 //Styles
-import sass from 'styles/app.sass';
+import sass from 'app.sass';
 
 //Components
-import Loader from 'components/loader.jsx';
+import Loader from 'loader.jsx';
 
 class App extends React.Component {
 	render(){
