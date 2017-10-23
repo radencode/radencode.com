@@ -4,7 +4,8 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
     entry: {
-				app: './src/components/app.jsx',
+                app: './src/components/app.jsx',
+                aos: './src/animations/aos.js',
 				vendor: ['react']
     },
     output: {
@@ -21,6 +22,10 @@ export default {
                     presets: ['react', 'es2015', 'stage-2'],
                     plugins: ['react-html-attrs', 'transform-decorators-legacy']
                 }
+            },
+            {
+                test: /\.css?$/,
+                loader: 'style-loader!css-loader'
             },
             {
                 test: /\.sass?$/,
@@ -45,11 +50,12 @@ export default {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.sass', '.jpg'],
+        extensions: ['.js', '.jsx', '.sass', '.css', '.jpg'],
         modules: [
             resolve(__dirname, 'src', 'components'),
             resolve(__dirname, 'src', 'styles'),
             resolve(__dirname, 'src', 'images'),
+            resolve(__dirname, 'src', 'animations'),
             resolve(__dirname, 'node_modules')
         ]
     },
