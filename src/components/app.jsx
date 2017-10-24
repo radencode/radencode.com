@@ -16,7 +16,10 @@ import Layout from 'layout.jsx';
 class App extends React.Component {
 	constructor(props){
 		super(props)
-		AOS.init();
+		AOS.init({
+			duration: 1000,
+			offset: 0
+		});
 		this.state = {loading: true};
 		this.updateContent = this.updateContent.bind(this);		
 	}
