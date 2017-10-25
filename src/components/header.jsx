@@ -58,13 +58,13 @@ export default class Header extends React.Component {
 					<MediaQuery query='(max-width: 499px)'>
 						{(matches) => { return matches ? this.tagline() : null }}
 					</MediaQuery>
-					<div id='learn-more' data-aos='fade-up' data-aos-delay='2500'>
-						<h3>Learn <span class='highlight'> more </span> about me</h3>
-						<div id='scroll-icon-mouse'>
-							<div id='scroll-icon-button'></div>
-						</div>
-					</div>
 				</main>
+				<div id='learn-more' data-aos='fade-up' data-aos-delay='2500' data-aos-anchor='#title'>
+					<h3>Learn <span class='highlight'> more </span> about me</h3>
+					<div id='scroll-icon-mouse'>
+						<div id='scroll-icon-button'></div>
+					</div>
+				</div>				
 			</header>
 		);
 	}
