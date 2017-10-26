@@ -9,36 +9,6 @@ header
 	background-position: center
 	position: relative
 
-	#menu-icon
-		width: 30px
-		height: 14px
-		position: absolute
-		top: 20px
-		left: 20px
-		cursor: pointer
-
-		.menu-bar
-			background-color: $white
-			height: 2px
-			position: absolute
-			left: 0
-			transition: 300ms all ease
-			&.top
-				width: 23px
-				top: 0
-				&.hovered
-					width: 30px
-			&.middle
-				width: 30px
-				top: 6px
-				&.hovered
-					width: 20px
-			&.bottom
-				width: 27px
-				top: 12px
-				&.hovered
-					width: 23px
-
 	main
 		width: 275px
 		height: auto
@@ -176,6 +146,7 @@ header
 	header
 		min-height: 475px
 		main
+			top: 150px
 			#title
 				height: 220px
 				#title-anchor
@@ -191,10 +162,40 @@ header
 				
 @media screen and (min-width: 1024px)
 	header
-		min-height: 550px
+		min-height: 750px
 		background-image: url("../images/bg_1920.jpg")
+		#menu
+			nav
+				width: 100%
+				height: auto
+				position: absolute
+				text-align: center
+				top: 50px
+				ul
+					padding: 0
+					margin: 0
+					display: inline-block
+					list-style: none
+					li
+						float: left
+						margin-left: 30px
+						color: $dark-gray
+						text-transform: uppercase
+						letter-spacing: 0.15em
+						font-family: Esphimere-Light
+						font-size: 11px
+						cursor: pointer
+						&:nth-child(1)
+							margin-left: 0
+						&:nth-child(5)
+							color: $yellow
+							font-family: Esphimere
+						span
+							transition: 500ms all ease
+							&:hover
+								color: $white
 		main
-			top: 150px
+			top: 200px
 			#title
 				height: 300px
 				#title-anchor
@@ -213,7 +214,7 @@ header
 
 @media screen and (min-width: 1400px)
 	header
-		min-height: 750px
+		min-height: 850px
 		background-image: url("../images/bg_1920.jpg")
 		main
 			#title
