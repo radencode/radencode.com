@@ -1,17 +1,11 @@
-//React modules
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-//Animations
-import AOS from 'aos';
-import 'aos.css';
-
-//Styles
-import 'app.sass';
-
-//Components
 import Loader from 'loader.jsx';
 import Layout from 'layout.jsx';
+import AOS from 'aos';
+import 'aos.css';
+import 'font-awesome.css'
+import 'app.sass';
 
 class App extends React.Component {
 	constructor(props){

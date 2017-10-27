@@ -1,4 +1,3 @@
-//React modules
 import React from 'react';
 import MediaQuery from 'react-responsive';
 

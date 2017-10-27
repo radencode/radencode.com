@@ -1,9 +1,11 @@
-//React modules
 import React from 'react';
 import MediaQuery from 'react-responsive';
-
-//Components
+import Particles from 'react-particles-js';
+import Typed from 'typed.js'
 import MobileMenu from 'mobileMenu.jsx';
+import SocialMedia from 'socialMedia.jsx';
+import Anchor from 'anchor.jsx';
+import particlesConfig from 'particles-config.json';
 
 export default class Header extends React.Component {
 	constructor(props){
@@ -21,11 +23,13 @@ export default class Header extends React.Component {
 	}
 	render(){
 		return (
-			<header>
+			<header>				
 				<MediaQuery query='(max-width: 1023px)'>
 					<MobileMenu/>		
 				</MediaQuery>
 				<MediaQuery query='(min-width: 1024px)'>
+					<Particles params={particlesConfig} style={{width: '100%', height: '100%', position: 'absolute'}}/>
+					<SocialMedia/>
 					<div id='menu'>
 						<nav>
 							<ul>
@@ -36,14 +40,14 @@ export default class Header extends React.Component {
 								<li data-aos='fade-down' data-aos-delay='1000'><span>Get In Touch</span></li>
 							</ul>
 						</nav>
-					</div>	
+					</div>
 				</MediaQuery>					
 				<main>
 					<div id='title' data-aos='fade' data-aos-delay='500'>
-						<div class='anchor top-left' data-aos='fade-down-right' data-aos-delay='1000'></div>
-						<div class='anchor top-right' data-aos='fade-down-left' data-aos-delay='1000'></div>
-						<div class='anchor bottom-right' data-aos='fade-up-left' data-aos-delay='1000'></div>
-						<div class='anchor bottom-left' data-aos='fade-up-right' data-aos-delay='1000'></div>
+						<Anchor type='top-left' animation='fade-down-right' delay='1000'/>
+						<Anchor type='top-right' animation='fade-down-left' delay='1000'/>
+						<Anchor type='bottom-right' animation='fade-up-left' delay='1000'/>
+						<Anchor type='bottom-left' animation='fade-up-right' delay='1000'/>
 						<div id="title-anchor">
 							<h1 data-aos='fade' data-aos-delay='1000'><span>Teddy </span><span class='highlight'>Radenkov</span></h1>
 							<MediaQuery query='(min-width: 500px)'>

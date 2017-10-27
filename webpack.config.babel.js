@@ -6,7 +6,7 @@ export default {
     entry: {
                 app: './src/components/app.jsx',
                 aos: './src/animations/aos.js',
-				vendor: ['react']
+				vendor: ['react', 'typed.js', 'react-particles-js', 'react-responsive', 'aos']
     },
     output: {
         filename: 'js/[name].bundle.[chunkhash].js',
@@ -22,6 +22,10 @@ export default {
                     presets: ['react', 'es2015', 'stage-2'],
                     plugins: ['react-html-attrs', 'transform-decorators-legacy']
                 }
+            },
+            {
+                test: /\.json?$/,
+                loader: 'json-loader'
             },
             {
                 test: /\.css?$/,
@@ -40,7 +44,7 @@ export default {
                 }
             },
             {
-                test: /\.(woff|otf|woff2|ttf)$/,
+                test: /\.(woff|otf|woff2|ttf|eot|svg)$/,
                 loader: 'url-loader',
                 options: {
                     name: './assets/fonts/[name]-[hash].[ext]',
@@ -50,12 +54,14 @@ export default {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.sass', '.css', '.jpg'],
+        extensions: ['.js', '.jsx', '.json', '.sass', '.css', '.jpg'],
         modules: [
             resolve(__dirname, 'src', 'components'),
             resolve(__dirname, 'src', 'styles'),
             resolve(__dirname, 'src', 'images'),
             resolve(__dirname, 'src', 'animations'),
+            resolve(__dirname, 'src', 'particles'),
+            resolve(__dirname, 'src', 'icons'),
             resolve(__dirname, 'node_modules')
         ]
     },

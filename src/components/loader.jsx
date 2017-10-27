@@ -1,4 +1,3 @@
-//React modules
 import React from 'react';
 
 export default class Loader extends React.Component {
