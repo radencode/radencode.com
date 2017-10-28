@@ -1,10 +1,9 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import Particles from 'react-particles-js';
-import MobileMenu from 'mobileMenu.jsx';
-import SocialMedia from 'socialMedia.jsx';
-import Featured from 'featured.jsx'
-import Anchor from 'anchor.jsx';
+import MobileMenu from 'header/mobileMenu.jsx';
+import SocialMedia from 'header/socialMedia.jsx';
+import Main from 'header/Main.jsx';
 import particlesConfig from 'particles-config.json';
 
 export default class Header extends React.Component {
@@ -42,27 +41,8 @@ export default class Header extends React.Component {
 						</nav>
 					</div>
 				</MediaQuery>					
-				<main>
-					<div id='title' data-aos='fade' data-aos-delay='500'>
-						<Anchor type='top-left' animation='fade-down-right' delay='1000'/>
-						<Anchor type='top-right' animation='fade-down-left' delay='1000'/>
-						<Anchor type='bottom-right' animation='fade-up-left' delay='1000'/>
-						<Anchor type='bottom-left' animation='fade-up-right' delay='1000'/>
-						<div id="title-anchor">
-							<h1 data-aos='fade' data-aos-delay='1000'><span>Teddy </span><span class='highlight'>Radenkov</span></h1>
-							<MediaQuery query='(min-width: 500px)'>
-								{(matches) => { return matches ? this.tagline() : null }}
-							</MediaQuery>
-						</div>						
-					</div>
-					<MediaQuery query='(max-width: 499px)'>
-						{(matches) => { return matches ? this.tagline() : null }}
-					</MediaQuery>
-					<MediaQuery query='(min-width: 1024px)'>
-						<Featured/>
-					</MediaQuery>
-				</main>
-				<div id='learn-more' data-aos='fade-up' data-aos-delay='2000' data-aos-anchor='#title'>
+				<Main/>
+				<div id='learn-more' data-aos='fade-up' data-aos-delay='1000' data-aos-anchor='#title'>
 					<h3>Learn <span class='highlight'> more </span> about me</h3>
 					<div id='scroll-icon-mouse'>
 						<div id='scroll-icon-button'></div>

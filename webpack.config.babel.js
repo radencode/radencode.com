@@ -61,7 +61,7 @@ export default {
             resolve(__dirname, 'src', 'images'),
             resolve(__dirname, 'src', 'animations'),
             resolve(__dirname, 'src', 'particles'),
-            resolve(__dirname, 'src', 'icons'),
+            resolve(__dirname, 'src', 'icons', 'css'),
             resolve(__dirname, 'node_modules')
         ]
     },
