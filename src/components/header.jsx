@@ -1,9 +1,9 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import Particles from 'react-particles-js';
-import Typed from 'typed.js'
 import MobileMenu from 'mobileMenu.jsx';
 import SocialMedia from 'socialMedia.jsx';
+import Featured from 'featured.jsx'
 import Anchor from 'anchor.jsx';
 import particlesConfig from 'particles-config.json';
 
@@ -57,6 +57,9 @@ export default class Header extends React.Component {
 					</div>
 					<MediaQuery query='(max-width: 499px)'>
 						{(matches) => { return matches ? this.tagline() : null }}
+					</MediaQuery>
+					<MediaQuery query='(min-width: 1024px)'>
+						<Featured/>
 					</MediaQuery>
 				</main>
 				<div id='learn-more' data-aos='fade-up' data-aos-delay='2000' data-aos-anchor='#title'>
