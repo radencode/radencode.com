@@ -13,15 +13,17 @@
 		position: absolute
 		top: 50%
 		left: 50%
-		transform: translate(-50%, -50%)
+		+translate(-50%, -50%)
 		
 		#loader-icon
 			width: 14px
 			height: 30px
 			margin: auto
 			position: relative
-			animation: fadeup 1s forwards
-			animation-delay: 3s
+			+animation-name(fadeup)
+			+animation-duration(1s)
+			+animation-fill-mode(forwards) 
+			+animation-delay(3s)
 
 			@keyframes fadeup
 				0%
@@ -36,22 +38,22 @@
 				width: 2px
 				float: left
 				position: absolute
-				bottom: 0				
+				bottom: 0
+				+animation-duration(1.5s)
+				+animation-timing-function(linear)
+				+animation-iteration-count(2)				
 				&.left
 					height: 23px
 					left: 0
-					animation: loading-left 1.5s linear
-					animation-iteration-count: 2
+					+animation-name(loading-left)					
 				&.middle
 					height: 30px
 					left: 6px
-					animation: loading-middle 1.5s linear
-					animation-iteration-count: 2
+					+animation-name(loading-middle)	
 				&.right
 					height: 27px
 					left: 12px
-					animation: loading-right 1.5s linear
-					animation-iteration-count: 2
+					+animation-name(loading-right)	
 				
 				@keyframes loading-left
 					0% 
@@ -96,8 +98,10 @@
 			color: $gray
 			text-align: center
 			margin: 25px 0
-			animation: fade 1s forwards
-			animation-delay: 3s
+			+animation-name(fade)
+			+animation-duration(1s)
+			+animation-fill-mode(forwards)
+			+animation-delay(3s)
 
 			@keyframes fade
 				0%
@@ -114,8 +118,10 @@
 			height: 1px
 			margin: auto
 			position: relative
-			animation: fadedown 1s forwards
-			animation-delay: 3s
+			+animation-name(fadedown)
+			+animation-duration(1s)
+			+animation-fill-mode(forwards)
+			+animation-delay(3s)
 
 			@keyframes fadedown
 				0%
@@ -129,7 +135,9 @@
 				background-color: $blue
 				width: 0
 				height: 1px
-				animation: load 3s forwards
+				+animation-name(load)
+				+animation-duration(3s)
+				+animation-fill-mode(forwards)
 
 			@keyframes load
 				0%

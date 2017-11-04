@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Loader from 'loader/loader.jsx';
+import Loader from 'global/loader.jsx';
 import Layout from 'layout.jsx';
 import AOS from 'aos';
 import 'aos.css';

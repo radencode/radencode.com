@@ -35,7 +35,9 @@ header
 			position: relative
 			border-radius: 20px
 			border: 1px solid $yellow
-			animation: scroll-bounce 1500ms infinite
+			+animation-name(scroll-bounce)
+			+animation-duration(1500ms)
+			+animation-iteration-count(infinite)	
 
 			@keyframes scroll-bounce
 				0%
@@ -52,7 +54,7 @@ header
 				top: 13px
 				margin: auto
 				background-color: $yellow
-				border-radius: 20px
+				+border-radius(20px)
 
 @media screen and (min-width: 500px)
 	header
@@ -95,7 +97,7 @@ header
 							color: $yellow
 							font-family: Esphimere
 						span
-							transition: 300ms all ease
+							+transition(all, 300ms, ease)
 							&:hover
 								color: $white
 								
