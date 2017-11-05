@@ -1,8 +1,8 @@
 .target
-  width: px
-  height: px
+  width: 48px
+  height: 48px
   position: absolute
-  &.circle
+  &.circle > .target-area
     +border-radius(50%)
   &.diamond
     +rotate(45deg)
@@ -10,26 +10,25 @@
     background-color: $dark-blue
     position: absolute
     &.outer
-      width: 100%
-      height: 100%
+      width: 42px
+      height: 42px
       top: 0
       left: 0
-      opacity: 
+      opacity: 0.05
     &.outer-middle
-      width: 75%
-      height: 75%
-      top: 25%
-      left: 25%
-      opacity: 
+      width: 30px
+      height: 30px
+      top: 6px
+      left: 6px
+      opacity: 0.1
     &.inner-middle
-      width: 50%
-      height: 50%
-      top: 50%
-      left: 50%
-      opacity: 
+      width: 18px
+      height: 18px
+      top: 12px
+      left: 12px
     &.inner
-      width: 25%
-      height: 25%
-      top: 75%
-      left: 75%
+      width: 6px
+      height: 6px
+      top: 18px
+      left: 18px
       background-color: $yellow

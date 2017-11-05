@@ -18,7 +18,10 @@ class App extends React.Component {
 		this.updateContent = this.updateContent.bind(this);		
 	}
 	componentDidMount(){
-		setTimeout(() => this.setState({loading: false}), 4500);
+		this.loader = setTimeout(() => this.setState({loading: false}), 4500);
+	}
+	componentWillUnmount(){
+		clearTimeout(this.loader);
 	}
 	updateContent(loading){
 		return loading ? <Loader/> : <Layout/>

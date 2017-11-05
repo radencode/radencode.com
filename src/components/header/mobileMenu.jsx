@@ -31,11 +31,11 @@ export default class MobileMenu extends React.Component {
 			return (
 				<nav data-aos='fade'>
 					<ul>
-						<li data-aos='fade-right' data-aos-delay='600'>Expertise</li>
-						<li data-aos='fade-right' data-aos-delay='800'>Skills</li>
-						<li data-aos='fade' data-aos-delay='1000'>Work</li>
-						<li data-aos='fade-left' data-aos-delay='800'>About</li>
-						<li data-aos='fade-left' data-aos-delay='600'>Get In Touch</li>
+						<li data-aos='fade-right' data-aos-delay='300'>Expertise</li>
+						<li data-aos='fade-right' data-aos-delay='500'>Skills</li>
+						<li data-aos='fade' data-aos-delay='700'>Work</li>
+						<li data-aos='fade-left' data-aos-delay='500'>About</li>
+						<li data-aos='fade-left' data-aos-delay='300'>Get In Touch</li>
 					</ul>
 				</nav>
 			);

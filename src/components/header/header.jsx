@@ -11,6 +11,13 @@ export default class Header extends React.Component {
 		super(props)
 		this.tagline = this.tagline.bind(this);	
 	}
+	componentDidMount(){
+		if(navigator.userAgent.match(/Android|iPhone|iPad|iPod|IEMobile|BlackBerry|webOS|Oper Mini/i)){
+			let header = document.getElementsByTagName('header')[0];
+			let height = header.offsetHeight;
+			header.style.height = height + 'px';
+		}
+	}
 	tagline(){
 		return (
 			<div id='tag-line'>

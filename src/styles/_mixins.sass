@@ -6,10 +6,10 @@
   #{$property}:         calc(#{$expression})  
 
 =border-radius($radius)
-  -webkit-boder-radius: $radius
-  -moz-boder-radius:    $radius
-  -o-boder-radius:      $radius
-  -ms-boder-radius:     $radius
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -o-border-radius:      $radius
+  -ms-border-radius:     $radius
   border-radius:        $radius
 
 =linear-gradient($direction, $first, $second)
@@ -17,7 +17,7 @@
   background:    -moz-linear-gradient($direction, $first, $second)
   background:      -o-linear-gradient($direction, $first, $second)
   background:     -ms-linear-gradient($direction, $first, $second)
-  background:         linear-gradient($direction, $first, $second)
+  background:         linear-gradient(to $direction, $first, $second)
 
 =transition($property, $duration, $ease: ease)
   -webkit-transition: $property $duration $ease

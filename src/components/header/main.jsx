@@ -1,7 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import Featured from 'header/featured.jsx'
-import Anchor from 'header/anchor.jsx';
+import Anchor from 'global/anchor.jsx';
 
 export default class Main extends React.Component {
 	constructor(props){
@@ -21,10 +21,10 @@ export default class Main extends React.Component {
 		return (			
 			<main>
 				<div id='title' data-aos='fade' data-aos-delay='1600'>
-					<Anchor type='top-left' animation='fade-down-right' delay='2000'/>
-					<Anchor type='top-right' animation='fade-down-left' delay='2000'/>
-					<Anchor type='bottom-right' animation='fade-up-left' delay='2000'/>
-					<Anchor type='bottom-left' animation='fade-up-right' delay='2000'/>
+					<Anchor type='top-left' color='yellow' animation='fade-down-right' delay='2000'/>
+					<Anchor type='top-right' color='yellow' animation='fade-down-left' delay='2000'/>
+					<Anchor type='bottom-right' color='yellow' animation='fade-up-left' delay='2000'/>
+					<Anchor type='bottom-left' color='yellow' animation='fade-up-right' delay='2000'/>
 					<div id="title-anchor">
 						<h1 data-aos='fade' data-aos-delay='2000'><span>Teddy </span><span class='highlight'>Radenkov</span></h1>
 						<MediaQuery query='(min-width: 500px)'>
