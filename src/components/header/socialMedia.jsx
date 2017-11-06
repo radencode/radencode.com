@@ -5,7 +5,7 @@ import Anchor from 'global/anchor.jsx'
 export default class SocialMedia extends React.Component {
 	render(){
 		return (
-			<div id='social-media' data-aos='fade-right' data-aos-delay='800'>		
+			<div id='social-media' data-aos='fade-right' data-aos-delay='800' data-aos-anchor='#header'>		
 				<a class='social-icon' href='#'>
 					<Anchor type='top-right' color='yellow' animation='fade-down-left' delay='1400'/>	
 					<Anchor type='bottom-right' color='yellow' animation='fade-up-left' delay='1400'/>

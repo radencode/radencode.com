@@ -19,6 +19,20 @@
   background:     -ms-linear-gradient($direction, $first, $second)
   background:         linear-gradient(to $direction, $first, $second)
 
+=fade-gradient($direction, $color)
+  background: -webkit-linear-gradient($direction, transparent, $color, transparent)
+  background:    -moz-linear-gradient($direction, transparent, $color, transparent)
+  background:      -o-linear-gradient($direction, transparent, $color, transparent)
+  background:     -ms-linear-gradient($direction, transparent, $color, transparent)
+  background:         linear-gradient(to $direction, transparent, $color, transparent)
+
+=box-shadow($x, $y, $b, $color)
+  -webkit-box-shadow: $x $y $b $color
+  -moz-box-shadow:    $x $y $b $color
+  -o-box-shadow:      $x $y $b $color
+  -ms-box-shadow:     $x $y $b $color
+  box-shadow:         $x $y $b $color
+
 =transition($property, $duration, $ease: ease)
   -webkit-transition: $property $duration $ease
   -moz-transition:    $property $duration $ease

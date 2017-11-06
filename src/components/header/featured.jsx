@@ -19,7 +19,7 @@ export default class Header extends React.Component {
 
 	render(){
 		return (		
-			<div id='featured' data-aos='fade' data-aos-delay='2000'>
+			<div id='featured' data-aos='fade' data-aos-delay='2000' data-aos-anchor='#header'>
 				<div class='rope left'>
 					<div class='h-anchor'></div>
 					<div class='r-anchor left'>

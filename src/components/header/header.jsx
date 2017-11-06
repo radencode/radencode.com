@@ -7,10 +7,6 @@ import Main from 'header/Main.jsx';
 import particlesConfig from 'particles-config.json';
 
 export default class Header extends React.Component {
-	constructor(props){
-		super(props)
-		this.tagline = this.tagline.bind(this);	
-	}
 	componentDidMount(){
 		if(navigator.userAgent.match(/Android|iPhone|iPad|iPod|IEMobile|BlackBerry|webOS|Oper Mini/i)){
 			let header = document.getElementsByTagName('header')[0];
@@ -18,18 +14,9 @@ export default class Header extends React.Component {
 			header.style.height = height + 'px';
 		}
 	}
-	tagline(){
-		return (
-			<div id='tag-line'>
-				<h2 data-aos='fade-right' data-aos-delay='1500'><span class='highlight'>Front-End</span> Engineer</h2>
-				<div id="line-breaker" data-aos='fade' data-aos-delay='2000'></div>
-				<h2 data-aos='fade-left' data-aos-delay='1500'>Currently available for work</h2>
-			</div>
-		);			
-	}
 	render(){
 		return (
-			<header>				
+			<header id='header'>				
 				<MediaQuery query='(max-width: 1023px)'>
 					<MobileMenu/>		
 				</MediaQuery>
@@ -39,17 +26,17 @@ export default class Header extends React.Component {
 					<div id='menu'>
 						<nav>
 							<ul>
-								<li data-aos='fade-down'><span>Expertise</span></li>
-								<li data-aos='fade-down' data-aos-delay='200'><span>Skills</span></li>
-								<li data-aos='fade-down' data-aos-delay='400'><span>Work</span></li>
-								<li data-aos='fade-down' data-aos-delay='800'><span>About</span></li>
-								<li data-aos='fade-down' data-aos-delay='1000'><span>Get In Touch</span></li>
+								<li data-aos='fade-down' data-aos-anchor='#header'><span>Expertise</span></li>
+								<li data-aos='fade-down' data-aos-delay='200' data-aos-anchor='#header'><span>Skills</span></li>
+								<li data-aos='fade-down' data-aos-delay='400' data-aos-anchor='#header'><span>Work</span></li>
+								<li data-aos='fade-down' data-aos-delay='800' data-aos-anchor='#header'><span>About</span></li>
+								<li data-aos='fade-down' data-aos-delay='1000' data-aos-anchor='#header'><span>Get In Touch</span></li>
 							</ul>
 						</nav>
 					</div>
 				</MediaQuery>					
 				<Main/>
-				<div id='learn-more' data-aos='fade-up' data-aos-delay='1000' data-aos-anchor='#title'>
+				<div id='learn-more' data-aos='fade-up' data-aos-delay='1000' data-aos-anchor='#header'>
 					<h3>Learn <span class='highlight'> more </span> about me</h3>
 					<div id='scroll-icon-mouse'>
 						<div id='scroll-icon-button'></div>

@@ -29,13 +29,13 @@ export default class MobileMenu extends React.Component {
 	menuList(animate){
 		if(animate){
 			return (
-				<nav data-aos='fade'>
+				<nav data-aos='fade' data-aos-anchor='#header'>
 					<ul>
-						<li data-aos='fade-right' data-aos-delay='300'>Expertise</li>
-						<li data-aos='fade-right' data-aos-delay='500'>Skills</li>
-						<li data-aos='fade' data-aos-delay='700'>Work</li>
-						<li data-aos='fade-left' data-aos-delay='500'>About</li>
-						<li data-aos='fade-left' data-aos-delay='300'>Get In Touch</li>
+						<li data-aos='fade-right' data-aos-delay='300' data-aos-anchor='#header'>Expertise</li>
+						<li data-aos='fade-right' data-aos-delay='500' data-aos-anchor='#header'>Skills</li>
+						<li data-aos='fade' data-aos-delay='700' data-aos-anchor='#header'>Work</li>
+						<li data-aos='fade-left' data-aos-delay='500' data-aos-anchor='#header'>About</li>
+						<li data-aos='fade-left' data-aos-delay='300' data-aos-anchor='#header'>Get In Touch</li>
 					</ul>
 				</nav>
 			);
