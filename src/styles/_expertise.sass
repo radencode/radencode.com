@@ -1,5 +1,30 @@
 #expertise
-	+linear-gradient(bottom, $light-gray, $white)
+	+linear-gradient(bottom, $light-gray, #FBFBFB)
 	width: 100%
 	padding: 100px 0
 	position: relative
+
+	#lightbulb-container
+		width: 280px
+		height: auto
+		margin: auto
+
+
+@media screen and (min-width: 1024px)
+	#expertise
+		padding: 200px 0
+		#lightbulb-container
+			width: 790px
+			padding-top: 50px
+
+
+@media screen and (min-width: 1600px)
+	#expertise
+		#lightbulb-container
+			width: 1260px
+			#lightbulb-container-top
+				width: 100%
+			#lightbulb-container-bottom
+				width: 790px
+				margin: auto
+		
