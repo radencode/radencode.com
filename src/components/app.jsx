@@ -12,7 +12,7 @@ class App extends React.Component {
 		super(props)
 		AOS.init({
 			duration: 1000,
-			offset: 150
+			offset: 100
 		});
 		this.state = {loading: true};
 		this.updateContent = this.updateContent.bind(this);		
