@@ -4,7 +4,7 @@ import Target from 'global/target.jsx';
 export default class LightBulb extends React.PureComponent{
   render(){
     return (
-      <div class={this.props.after ? 'lightbulb after' : 'lightbulb'}>
+      <div class={'lightbulb ' + this.props.placement}>
 				<div class='icon'>
 					<div class='bulb' data-aos='fade-down'>
 						<Target shape='circle' position={{bottom: '-21px', left: '39px'}}/>
