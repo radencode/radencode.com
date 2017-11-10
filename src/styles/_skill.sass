@@ -1,0 +1,98 @@
+
+#skill-javascript, #skill-cpp, #skill-webpack	
+	top: 0
+	left: 0
+#skill-react, #skill-php, #skill-babel
+	top: 0 
+	left: 95px
+#skill-redux, #skill-mysql, #skill-yarn		
+	top: 0
+	left: 190px
+#skill-html, #skill-node, #skill-git	
+	top: 115px
+	left: 47.5px
+#skill-css, #skill-electron, #skill-cli	
+	top: 115px
+	left: 142.5px
+
+.skill
+	width: 65px
+	height: 65px
+	position: absolute
+
+	.skill-properties
+		width: auto
+		height: auto
+		position: absolute
+		top: 50%
+		left: 50%
+		+translate(-50%, -50%)
+		text-transform: uppercase 
+	
+		.skill-diamond
+			width: 35px
+			height: 35px
+			display: block
+			margin: auto
+			position: relative		
+			text-align: center
+			-webkit-backface-visibility: hidden
+
+			&:before
+				content: ''
+				display: block
+				width: 35px
+				height: 35px
+				+rotate(45deg)
+				-webkit-backface-visibility: hidden
+			
+			&.dark-blue:before
+				background-color: $dark-blue
+			&.blue:before
+				background-color: $blue
+			&.gray:before
+				background-color: $skill-gray
+
+			.skill-timeframe						
+				position: absolute
+				top: 50%
+				left: 50%
+				+translate(-50%, -60%)
+				color: $white				
+
+				.skill-years
+					font-family: Esphimere-Bold
+					font-size: 13px
+				.skill-tag
+					font-family: Esphimere-Bold
+					letter-spacing: 0.3em
+					font-size: 6px
+
+		.skill-name
+			text-align: center
+			font-family: Esphimere-Bold
+			font-size: 8px
+			letter-spacing: 0.25em
+			padding: 13px 0 5px 0
+			&.dark-blue
+				color: $dark-blue
+			&.blue
+				color: $blue
+			&.gray
+				color: $skill-gray
+
+		.skill-progress
+			width: 65px
+			height: 4px
+			background-color: $gray
+
+			.skill-level
+				height: 4px
+				&.dark-blue
+					background-color: $dark-blue
+				&.blue
+					background-color: $blue
+				&.gray
+					background-color: $skill-gray
+
+
