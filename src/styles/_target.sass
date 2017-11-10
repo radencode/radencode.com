@@ -2,13 +2,18 @@
   width: 42px
   height: 42px
   position: absolute
+  &.translate
+    +translate(-50%, 0)
   &.circle > .target-area
     +border-radius(50%)
   &.diamond
     +rotate(45deg)
   .target-area
-    background-color: $blue
     position: absolute
+    &.dark-blue
+      background-color: $dark-blue
+    &.blue
+      background-color: $blue
     &.outer
       width: 42px
       height: 42px
