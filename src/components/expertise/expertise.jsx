@@ -28,7 +28,7 @@ export default class Expertise extends React.Component{
   }
   performance(){
     return (
-      <LightBulb icon='fa fa-database' placement='third' order={3} title='Performance' discription='Fast loading web pages are crutial to the end user; therefore I strive to devlop the fastest applications possible by providing quality front-end clients built with performace and scalability in mind.'/>
+      <LightBulb icon='fa fa-database' placement='third' order={3} title='Performance' discription='Fast loading web pages are crutial to the end user; therefore I strive to develop the fastest applications possible by providing quality front-end clients built with performace and scalability in mind.'/>
     );
   }
   customization(){
@@ -44,7 +44,9 @@ export default class Expertise extends React.Component{
   render(){
     return (
       <section id='expertise'>
-        <Particles params={particlesConfig} style={{width: '100%', height: '100%', position: 'absolute'}}/>
+        <MediaQuery query='(min-width: 1024px)'>
+          <Particles params={particlesConfig} style={{width: '100%', height: '100%', position: 'absolute', top: '0px', left: '0px'}}/>		
+				</MediaQuery>        
         <MediaQuery query='(min-width: 1600px)'>
           <Square size='big' angle='thirty-right' position={{top: '800px', right: '-1000px'}}/>
 					<Square size='big' angle='fifteen-left' position={{top: '400px', left: '-900px'}}/>		
