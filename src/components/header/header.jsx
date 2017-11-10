@@ -21,7 +21,7 @@ export default class Header extends React.Component {
 					<MobileMenu/>		
 				</MediaQuery>
 				<MediaQuery query='(min-width: 1024px)'>
-					<Particles params={particlesConfig} style={{width: '100%', height: '100%', position: 'absolute'}}/>
+					<Particles params={particlesConfig} style={{width: '100%', height: '100%', position: 'absolute', top: '0px', left: '0px'}}/>
 					<SocialMedia/>
 					<div id='menu'>
 						<nav>
