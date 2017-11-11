@@ -2,8 +2,13 @@
 	width: 280px
 	height: auto
 	margin: auto
+	padding-top: 50px
+	position: relative
+	&.Front-End
+		padding-top: 0px
 
 	.skillset-header
+		background-color: $white
 		width: 160px
 		height: 160px
 		margin: auto
@@ -21,8 +26,6 @@
 			color: $skill-gray
 		
 		.skillset-name
-			display: inline-block
-			width: auto
 			bottom: -60px
 			left: 50%
 			+translate(-50%, 0)
@@ -33,7 +36,11 @@
 			text-transform: uppercase
 			white-space: nowrap
 			line-height: normal
-			
+
+	.skillset-header > .target
+			bottom: -21px	
+			left: 50%
+			+translate(-50%, 0)
 
 	.skillset-skills
 		width: 255px
@@ -43,20 +50,77 @@
 		+translate(-50%, 0)
 		position: relative
 
-	.skillset-check-list
-		ul
-			margin: 0 auto
-			padding: 20px 0 0 0 
-			list-style: none
+@media screen and (min-width: 600px)
+	.skillset	
+		width: 520px
+		.skillset-header				
+			.skillset-name
+				font-size: 20px			
+		.skillset-skills
+			width: 400px
+			height: 280px
 
-			li
-				padding-bottom: 20px
-				font-size: 10px
-				font-family: Esphimere-Light
-				letter-spacing: 0.2em
-				line-height: 25px
-				text-align: center 
-				color: $dark-blue
+@media screen and (min-width: 750px)
+	.skillset	
+		width: 700px
+		.skillset-skills
+			width: 500px
 
-				i
-					font-size: 16px
+@media screen and (min-width: 1024px)
+	.skillset
+		width: 704px	
+		height: 704px
+		padding: 0
+		&.Back-End
+			margin: 270px 0 200px 0
+		.skillset-header
+			width: 250px
+			height: 250px
+			font-size: 80px
+			line-height: 250px
+			position: absolute
+			top: 227px
+			&.Front-End, &.Dev-Tools, &.Back-End
+				left: 227px
+			&.Dev-Tools > .target, &.Back-End > .target, &.Front-End > .target
+				bottom: -21px	
+				left: 125px
+			.skillset-name	
+				background-color: $dark-blue
+				padding: 5px 10px
+				color: $white		
+				font-size: 25px
+				bottom: auto
+				&.Dev-Tools, &.Back-End, &.Front-End
+					bottom: -80px
+
+@media screen and (min-width: 1600px)
+	.skillset
+		width: 1500px
+		&.Back-End
+			margin: 100px 0			
+		.skillset-header
+			&.Back-End
+				left: auto
+				right: 227px
+			&.Front-End > .target
+				top: 10px
+				left: 208px
+			&.Back-End > .target
+				top: 10px
+				left: 42px	
+			&.Dev-Tools > .target
+				top: -21px				
+			.skillset-name		
+				&.Front-End
+					top: -38px
+					left: 338px
+					bottom: auto
+				&.Back-End
+					top: -38px
+					left: -82px
+					bottom: auto
+				&.Dev-Tools
+					top: -80px
+					bottom: auto					
+			
