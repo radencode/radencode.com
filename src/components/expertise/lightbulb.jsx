@@ -7,7 +7,7 @@ export default class LightBulb extends React.PureComponent{
       <div class={'lightbulb ' + this.props.placement}>
 				<div class='icon'>
 					<div class='bulb' data-aos='fade-down'>
-						<Target shape='circle' color='blue' translate={true} position={{bottom: '-21px', left: '50%'}}/>
+						<Target shape='circle' color='blue'/>
 						<div class='stand' data-aos='fade-up'></div>
 						<i class={this.props.icon} aria-hidden="true"></i>
 					</div>
