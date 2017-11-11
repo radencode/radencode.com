@@ -1,0 +1,57 @@
+.skillset-check-list
+	ul
+		margin: 0 auto
+		padding: 20px 0 0 0 
+		list-style: none
+
+		li
+			padding-bottom: 20px
+			font-size: 10px
+			font-family: Esphimere-Light
+			letter-spacing: 0.2em
+			line-height: 25px
+			text-align: center 
+			color: $dark-blue
+
+			i
+				font-size: 16px
+
+@media screen and (min-width: 600px)
+	.skillset-check-list
+		ul			
+			li
+				padding-bottom: 30px				
+				font-size: 11px				
+				i
+					font-size: 18px
+
+@media screen and (min-width: 1024px)
+	.skillset-check-list
+		ul
+			width: 100%
+			position: absolute
+			top: 600px
+			li
+				padding-bottom: 5px
+				font-size: 13px					
+				font-family: Esphimere			
+
+
+@media screen and (min-width: 1600px)
+	.skillset-check-list
+		ul
+			top: 50%
+			+translate(0, -50%)
+			&.Front-End
+				left: 492px
+			&.Back-End
+				right: 492px
+			li
+				&.Front-End
+					text-align: left
+				&.Back-End
+					text-align: right
+				span
+					padding: 0 10px
+				i
+					font-size: 16px
