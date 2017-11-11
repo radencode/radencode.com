@@ -36,7 +36,6 @@
 			margin: auto
 			position: relative		
 			text-align: center
-			-webkit-backface-visibility: hidden
 
 			&:before
 				content: ''
@@ -44,7 +43,6 @@
 				width: 35px
 				height: 35px
 				+rotate(45deg)
-				-webkit-backface-visibility: hidden
 			
 			&.dark-blue:before
 				background-color: $dark-blue
@@ -64,7 +62,7 @@
 					font-family: Esphimere-Bold
 					font-size: 13px
 				.skill-tag
-					font-family: Esphimere-Bold
+					font-family: Esphimere-Light
 					letter-spacing: 0.3em
 					font-size: 6px
 
@@ -87,7 +85,7 @@
 			background-color: $gray
 
 			.skill-level
-				height: 4px
+				height: 100%
 				&.dark-blue
 					background-color: $dark-blue
 				&.blue
@@ -96,3 +94,147 @@
 					background-color: $skill-gray
 
 
+
+@media screen and (min-width: 600px)	
+	#skill-javascript, #skill-cpp, #skill-webpack	
+		top: 0
+		left: 0
+	#skill-react, #skill-php, #skill-babel
+		top: 0 
+		left: 150px
+	#skill-redux, #skill-mysql, #skill-yarn		
+		top: 0
+		left: 300px
+	#skill-html, #skill-node, #skill-git	
+		top: 180px
+		left: 75px
+	#skill-css, #skill-electron, #skill-cli	
+		top: 180px
+		left: 225px
+	.skill
+		width: 100px
+		height: 100px
+		.skill-properties
+			.skill-diamond
+				width: 50px
+				height: 50px		
+				&:before
+					width: 50px
+					height: 50px					
+				.skill-timeframe						
+					.skill-years
+						font-size: 16px
+					.skill-tag
+						font-size: 9px					
+			.skill-name
+				font-size: 11px
+				padding: 22px 0 8px 0				
+			.skill-progress	
+				width: 90px
+				height: 5px
+
+
+@media screen and (min-width: 750px)	
+	#skill-javascript, #skill-cpp, #skill-webpack	
+		top: 0
+		left: 0
+	#skill-react, #skill-php, #skill-babel
+		top: 0 
+		left: 200px
+	#skill-redux, #skill-mysql, #skill-yarn		
+		top: 0
+		left: 400px
+	#skill-html, #skill-node, #skill-git	
+		top: 180px
+		left: 100px
+	#skill-css, #skill-electron, #skill-cli	
+		top: 180px
+		left: 300px
+						
+				
+@media screen and (min-width: 1024px)
+	#skill-webpack, #skill-javascript, #skill-cpp
+		top: 276px
+		left: 0
+	#skill-babel, #skill-react, #skill-php
+		top: 40px
+		left: 40px
+	#skill-yarn, #skill-redux, #skill-mysql
+		top: 0
+		left: 276px 
+	#skill-git, #skill-html, #skill-node
+		top: 40px
+		left: 512px
+	#skill-cli, #skill-css, #skill-electron
+		top: 276px
+		left: 552px
+	.skill
+		width: 150px
+		height: 150px
+		border: 1px solid $light-gray
+		.skill-properties
+			.skill-diamond
+				width: 60px
+				height: 60px			
+				&:before
+					width: 60px
+					height: 60px						
+				.skill-timeframe						
+					.skill-years
+						font-size: 20px
+						padding-bottom: 5px
+					.skill-tag
+						font-size: 8px		
+			.skill-name
+				font-size: 12px
+				padding: 25px 0 10px 0
+			.skill-progress
+				width: 100px
+
+@media screen and (min-width: 1600px)
+	#skill-javascript
+		top: 0
+		left: 276px
+	#skill-redux
+		top: 276px
+		left: 0
+	#skill-html
+		top: auto
+		bottom: 40px
+		left: 40px
+	#skill-css
+		top: auto
+		bottom: 0
+		left: 276px
+	#skill-cpp
+		top: 0
+		right: 276px
+		left: auto
+	#skill-php
+		right: 40px
+		left: auto
+	#skill-mysql
+		top: 276px
+		right: 0
+		left: auto
+	#skill-node
+		top: auto
+		bottom: 40px
+		right: 40px
+		left: auto
+	#skill-electron
+		top: auto
+		bottom: 0
+		right: 276px
+		left: auto
+	#skill-babel
+		top: auto
+		bottom: 40px
+	#skill-yarn
+		top: auto
+		bottom: 0
+	#skill-git
+		top: auto
+		bottom: 40px
+
+		
