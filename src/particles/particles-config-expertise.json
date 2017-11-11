@@ -8,7 +8,7 @@
       }
     },
     "color": {
-      "value": "#bbbbbb"
+      "value": "#2B466A"
     },
     "shape": {
       "type": "circle",
@@ -26,7 +26,7 @@
       }
     },
     "opacity": {
-      "value": 1,
+      "value": 0.3,
       "random": false,
       "anim": {
         "enable": false,
