@@ -1,0 +1,30 @@
+.tag
+	display: inline-block
+	width: auto
+	height: auto
+	margin: 5px
+	position: relative
+	padding: 5px 10px
+	border: 1px solid $light-gray
+	
+	h2
+		font-family: Esphimere
+		font-size: 10px
+		letter-spacing: 0.05em
+		color: $blue
+
+@media screen and(min-width: 500px)
+	.tag	
+		margin: 7px	
+		h2
+			font-size: 13px
+
+
+@media screen and(min-width: 1024px)
+	.tag	
+		&.left
+			margin: 0 15px 0 0	
+		&.right
+			margin: 0 0 0 15px
+		h2
+			font-size: 11px
