@@ -2,6 +2,7 @@ import React from 'react';
 import Header from 'header/header.jsx';
 import Expertise from 'expertise/expertise.jsx';
 import Skills from 'skills/skills.jsx';
+import Work from 'work/work.jsx';
 
 export default class Layout extends React.Component {
 	render(){
@@ -10,6 +11,7 @@ export default class Layout extends React.Component {
 				<Header/>
 				<Expertise/>
 				<Skills/>
+				<Work/>
 			</div>
 		);
 	}
