@@ -58,7 +58,7 @@ export default class Skills extends React.Component{
         'Intuitive UI patterns that provide a smooth user experience.',
         'Agile development approach with scalability in mind.',
       ],
-    }
+    };
     this.backEndSkills = {
       skillset: 'Back-End',
 			key: 10,
@@ -107,7 +107,7 @@ export default class Skills extends React.Component{
         'Proficient database integration.',
         'Continuous improvement with incremental changes.',
       ],
-    }
+    };
     this.devToolSkills = {
       skillset: 'Dev-Tools',
 			key: 100,
@@ -151,7 +151,7 @@ export default class Skills extends React.Component{
 				},
 			],
       check: false,
-    }
+    };
   }
   render(){    
     return (
@@ -159,11 +159,11 @@ export default class Skills extends React.Component{
 				<MediaQuery query='(min-width: 1024px)'>
           <Particles params={particlesConfig} style={{width: '100%', height: '100%', position: 'absolute', top: '0px', left: '0px'}}/>		
 				</MediaQuery>
-				<Title title='Skills' subTitle={'I always strive for the better'}/>
+				<Title title='Skills' subTitle='I always strive for the better'/>
 				<Discription id='skills-anchor' discription='I thrive in a challenging environment that requires quick thinking and problem solving skills. I love to learn and continue to practice with the latest technology in hopes of achieving my personal goals as well as better my skills.'/>
         <div id='skill-path'>
 					<MediaQuery query='(min-width: 1600px)'>
-						<Square size='big' angle='forty-five' position={{top: '717px', left: '-188px'}}/>		
+						<Square light={true} size='big' angle='forty-five' position={{top: '717px', left: '-188px'}}/>		
 					</MediaQuery>
 					<Skillset skills={this.frontEndSkills}/>
 					<Skillset skills={this.backEndSkills}/>
