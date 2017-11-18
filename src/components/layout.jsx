@@ -1,18 +1,20 @@
+//Modules
 import React from 'react';
-import Header from 'header/header.jsx';
+//Components
 import Expertise from 'expertise/expertise.jsx';
+import Header from 'header/header.jsx';
 import Skills from 'skills/skills.jsx';
 import Work from 'work/work.jsx';
 
-export default class Layout extends React.Component {
-	render(){
-		return (
-			<div class='layout'>
-				<Header/>
-				<Expertise/>
-				<Skills/>
-				<Work/>
-			</div>
-		);
-	}
+const Layout = () => {
+	return (
+		<div class='layout'>
+			<Header/>
+			<Expertise/>
+			<Skills/>
+			<Work/>
+		</div>
+	);
 }
+
+export default Layout;

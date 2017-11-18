@@ -1,12 +1,17 @@
-import React from 'react';
+//Modules
 import MediaQuery from 'react-responsive';
 import Particles from 'react-particles-js';
+import React from 'react';
+
+//Components
+import Main from 'header/Main.jsx';
 import MobileMenu from 'header/mobileMenu.jsx';
 import SocialMedia from 'header/socialMedia.jsx';
-import Main from 'header/Main.jsx';
-import particlesConfig from 'particles-config.json';
 
-export default class Header extends React.Component {
+//Assets
+import ParticlesConfig from 'particles-config-header.json';
+
+export default class Header extends React.PureComponent {
 	componentDidMount(){
 		if(navigator.userAgent.match(/Android|iPhone|iPad|iPod|IEMobile|BlackBerry|webOS|Oper Mini/i)){
 			let header = document.getElementsByTagName('header')[0];
@@ -21,7 +26,7 @@ export default class Header extends React.Component {
 					<MobileMenu/>		
 				</MediaQuery>
 				<MediaQuery query='(min-width: 1024px)'>
-					<Particles params={particlesConfig} style={{width: '100%', height: '100%', position: 'absolute', top: '0px', left: '0px'}}/>
+					<Particles params={ParticlesConfig} style={{width: '100%', height: '100%', position: 'absolute', top: '0px', left: '0px'}}/>
 					<SocialMedia/>
 					<div id='menu'>
 						<nav>

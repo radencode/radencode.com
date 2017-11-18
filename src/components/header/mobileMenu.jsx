@@ -1,5 +1,6 @@
-import React from 'react';
+//Modules
 import MediaQuery from 'react-responsive';
+import React from 'react';
 
 export default class MobileMenu extends React.Component {
 	constructor(props){
@@ -42,8 +43,8 @@ export default class MobileMenu extends React.Component {
 		}
 	}
 	render(){
-		let hover = this.state.hover ? ' hover' : '';
-		let open = this.state.open ? ' open' : '';
+		const hover = this.state.hover ? ' hover' : '';
+		const open = this.state.open ? ' open' : '';
 		return (
 			<div id="menu-mobile">		
 				{this.menuList(this.state.open)}	

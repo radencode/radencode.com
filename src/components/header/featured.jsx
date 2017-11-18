@@ -1,8 +1,8 @@
+//Modules
 import React from 'react';
 import Typed from 'typed.js'
 
-export default class Header extends React.Component {
-
+export default class Header extends React.PureComponent {
 	componentDidMount(){
 		let typed = new Typed('#featured-item', {
 			strings: ['Single Page Apps', 'Landing Pages', 'User Interfaces', 'Desktop Apps'],
@@ -16,7 +16,6 @@ export default class Header extends React.Component {
 			cursorChar: '|'
 		});		
 	}
-
 	render(){
 		return (		
 			<div id='featured' data-aos='fade' data-aos-delay='2000' data-aos-anchor='#header'>

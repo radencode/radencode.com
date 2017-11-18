@@ -1,10 +1,13 @@
+//Modules
+import AOS from 'aos';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Loader from 'global/loader.jsx';
+//Components
 import Layout from 'layout.jsx';
-import AOS from 'aos';
-import 'aos.css';
+import Loader from 'global/loader.jsx';
+//Assets
 import 'font-awesome.css'
+import 'aos.css';
 import 'app.sass';
 
 class App extends React.Component {

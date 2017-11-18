@@ -1,21 +1,14 @@
-import React from 'react';
+//Modules
 import MediaQuery from 'react-responsive';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+//Components
+import CheckList from 'skills/checkList.jsx';
 import Skill from 'skills/skill.jsx';
 import Target from 'global/target.jsx';
-import CheckList from 'skills/checkList.jsx';
 
-export default class Skillset extends React.PureComponent{
-  constructor(props){
-		super(props);
-    this.skillChecks = this.skillCheckList.bind(this);
-    this.setAnimation = this.setAnimation.bind(this);
-  }
-  skillCheckList(check){
-    if(check){
-      return ( <CheckList skills={this.props.skills} /> );
-    }
-  }
-  setAnimation(skillset, index){
+const setAnimation = (skillset, index) => {
     switch(skillset){
       case 'Front-End':
         return {
@@ -37,24 +30,37 @@ export default class Skillset extends React.PureComponent{
         }
     }
   }
-  render(){    
-    return (
-      <div class={'skillset ' + this.props.skills.skillset}>
-        <div id={'skillset-header-' + this.props.skills.skillset}class={'skillset-header ' + this.props.skills.skillset + ' ' + this.props.skills.color} data-aos='zoom-in-up'>
-          <i class={this.props.skills.icon} aria-hidden="true"></i>
-          <Target shape='circle' color='dark-blue'/>
-          <h1 class={'skillset-name ' + this.props.skills.skillset}>{this.props.skills.skillset}</h1>
-        </div>
-        <MediaQuery query='(max-width: 1023px)'>
-          <div class='skillset-skills'>
-            {this.props.skills.skillList.map((skill, index) => <Skill key={this.props.skills.key + index} color={this.props.skills.color}skill={skill} animation={this.setAnimation(this.props.skills.skillset, index + 2)}/> )}
-          </div>
-        </MediaQuery>
-        <MediaQuery query='(min-width: 1024px)'>		
-          {this.props.skills.skillList.map((skill, index) => <Skill key={this.props.skills.key + index} color={this.props.skills.color}skill={skill} animation={this.setAnimation(this.props.skills.skillset, index)}/> )}
-        </MediaQuery>        
-        {this.skillCheckList(this.props.skills.check)}
-      </div>
-    );
-  }    
+
+const skillCheckList = skillData =>{
+  if(skillData.hasCheckList){
+    return ( <CheckList checkList={skillData.checkList} skillset={skillData.skillset} uniKey={skillData.key} /> );
+  }
 }
+
+const Skillset = props => {
+  const { skillData } = props;
+  return (
+    <div class={'skillset ' + skillData.skillset}>
+      <div id={'skillset-header-' + skillData.skillset}class={'skillset-header ' + skillData.skillset + ' ' + skillData.color} data-aos='zoom-in-up'>
+        <i class={skillData.icon} aria-hidden="true"></i>
+        <Target shape='circle' color='dark-blue'/>
+        <h1 class={'skillset-name ' + skillData.skillset}>{skillData.skillset}</h1>
+      </div>
+      <MediaQuery query='(max-width: 1023px)'>
+        <div class='skillset-skills'>
+          {skillData.skillList.map((skill, index) => <Skill key={skillData.key + index} color={skillData.color} skill={skill} animation={setAnimation(skillData.skillset, index + 2)}/> )}
+        </div>
+      </MediaQuery>
+      <MediaQuery query='(min-width: 1024px)'>		
+        {skillData.skillList.map((skill, index) => <Skill key={skillData.key + index} color={skillData.color}skill={skill} animation={setAnimation(skillData.skillset, index)}/> )}
+      </MediaQuery>        
+      {skillCheckList(skillData)}
+    </div>
+  );
+}
+
+Skillset.propTypes = {
+  skillData: PropTypes.object.isRequired,
+};
+
+export default Skillset;
