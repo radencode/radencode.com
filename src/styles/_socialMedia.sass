@@ -6,51 +6,6 @@
 		top: 212.5px
 		left: 0
 
-		.social-icon
-			display: block
-			background: linear-gradient(to right,  rgba(9, 14, 22, 0.1), rgba(43, 70, 106, 0.2))
-			width: 44px
-			height: 43px
-			margin-top: 20px
-			border-top: 1px solid $light-blue
-			border-right: 1px solid $light-blue
-			border-bottom: 1px solid $light-blue
-			cursor: pointer
-			position: relative
-			color: $blue
-			font-size: 20px
-			text-align: center
-			line-height: 45px
-			+transition(all, 300ms, ease)
-			&:nth-child(1)
-				margin-top: 0
-			&.featured
-				width: 59px
-				font-size: 25px
-			&:hover
-				color: $yellow
-			&:hover > h3
-				opacity: 1
-				visibility: visible
-				left: 65px
-			h3
-				width: 250px
-				position: absolute
-				color: $gray
-				font-size: 11px
-				font-family: Esphimere-Light
-				text-transform: uppercase
-				letter-spacing: 0.4em
-				top: 0
-				left: 80px
-				opacity: 0
-				visibility: hidden
-				+transition(all, 500ms, ease-in-out)
-				span
-					color: $yellow
-					font-family: Esphimere
-
-
 @media screen and (min-width: 1400px)
 	#social-media	
 		top: 242.5px
