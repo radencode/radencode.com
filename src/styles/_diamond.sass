@@ -1,79 +1,135 @@
-$positions-left: 0 0, 244 61, 183 122, 122 183, 61 244, 183 244, 122 304, 61 365
-$positions-right: 122 61, 122 0, 61 61, 0 122, 305 61, 122 244, 244 244, 183 305
+@media screen and (min-width: 1024px)
+	$positions-left: 0 0, 244 61, 183 122, 122 183, 61 244, 183 244, 122 304, 61 365
+	$positions-right: 122 61, 122 0, 61 61, 0 122, 305 61, 122 244, 244 244, 61 305
 
-.diamond-area
-	position: absolute
-	
-	&.big
-		width: 240px
-		height: 240px
-	
-	&.small
-		width: 118px
-		height: 118px
-
-	@for $i from 1 through length($positions-left)
-		$top: nth(nth($positions-left, $i), 1)
-		$left: nth(nth($positions-left, $i), 2)
-		&.diamond-#{$i}-left
-			top: #{$top}px
-			left: #{$left}px
-		
-	
-	@for $i from 1 through length($positions-right)
-		$top: nth(nth($positions-right, $i), 1)
-		$left: nth(nth($positions-right, $i), 2)
-		&.diamond-#{$i}-right
-			top: #{$top}px
-			left: #{$left}px
-	
-	.diamond
-		overflow: hidden
+	.diamond-area
 		position: absolute
-		left: 50%
-		top: 50%
-		+rotate_translate(-50%, -50%, 45deg)
-
+		
 		&.big
-			width: 170px
-			height: 170px
-						
+			width: 240px
+			height: 240px
+		
 		&.small
-			width: 84px
-			height: 84px
+			width: 118px
+			height: 118px
 
-		.diamond-image	
-			background-size: auto
-			background-repeat: no-repeat
+		@for $i from 1 through length($positions-left)
+			$top: nth(nth($positions-left, $i), 1)
+			$left: nth(nth($positions-left, $i), 2)
+			&.diamond-#{$i}-left
+				top: #{$top}px
+				left: #{$left}px
+			
+		
+		@for $i from 1 through length($positions-right)
+			$top: nth(nth($positions-right, $i), 1)
+			$left: nth(nth($positions-right, $i), 2)
+			&.diamond-#{$i}-right
+				top: #{$top}px
+				left: #{$left}px
+		
+		.diamond
+			overflow: hidden
 			position: absolute
-			+rotate(-45deg)
+			left: 50%
+			top: 50%
+			+rotate_translate(-50%, -50%, 45deg)
 
 			&.big
-				width: 240px
-				height: 240px
-				top: -35px
-				left: -35px
-
+				width: 170px
+				height: 170px
+							
 			&.small
-				width: 118px
-				height: 118px
-				top: -17px
-				left: -17px
+				width: 84px
+				height: 84px
 
-			&.radencode
-				background-image: url('../images/radencode-project_484.png')
+			.diamond-image	
+				background-size: auto
+				background-repeat: no-repeat
+				position: absolute
+				+rotate(-45deg)
+
+				&.big
+					width: 240px
+					height: 240px
+					top: -35px
+					left: -35px
+
+				&.small
+					width: 118px
+					height: 118px
+					top: -17px
+					left: -17px
+
+				&.radencode
+					background-image: url('../images/radencode-project_484.png')
+					
+				&.reflow
+					background-image: url('../images/reflow-project_423.png')
+
+				@for $i from 1 through length($positions-left)
+					$top: nth(nth($positions-left, $i), 1)
+					$left: nth(nth($positions-left, $i), 2)
+					&.image-#{$i}-left
+						background-position: #{-$left}px #{-$top}px
 				
-			&.reflow
-				background-image: url('../images/reflow-project_423.png')
+				@for $i from 1 through length($positions-right)
+					$top: nth(nth($positions-right, $i), 1)
+					$left: nth(nth($positions-right, $i), 2)
+					&.image-#{$i}-right
+						background-position: #{-$left}px #{-$top}px
 
-			@for $i from 1 through length($positions-left)
-				$top: nth(nth($positions-left, $i), 1)
-				$left: nth(nth($positions-left, $i), 2)
-				&.image-#{$i}-left
-					background-position: #{-$left}px #{-$top}px
-			
-			@for $i from 1 through length($positions-right)
-				$top: nth(nth($positions-right, $i), 1)
-				$left: nth(nth($positions-right, $i), 2)
-				&.image-#{$i}-right
-					background-position: #{-$left}px #{-$top}px
+@media screen and (min-width: 1600px)
+	$positions-left: 0 0, 454 113.5, 341 227.5, 227 340.5, 113.5 454, 341 454, 227 567.5, 113.5 681
+	$positions-right: 227 113.5, 227 0, 113.5 113.5, 0 227, 567.5 113.5, 227 454, 454 454, 113.5 567.5 
+	.diamond-area	
+		&.big
+			width: 450px
+			height: 450px		
+		&.small
+			width: 223px
+			height: 223px
+		@for $i from 1 through length($positions-left)
+			$top: nth(nth($positions-left, $i), 1)
+			$left: nth(nth($positions-left, $i), 2)
+			&.diamond-#{$i}-left
+				top: #{$top}px
+				left: #{$left}px
+		@for $i from 1 through length($positions-right)
+			$top: nth(nth($positions-right, $i), 1)
+			$left: nth(nth($positions-right, $i), 2)
+			&.diamond-#{$i}-right
+				top: #{$top}px
+				left: #{$left}px		
+		.diamond
+			&.big
+				width: 318px
+				height: 318px							
+			&.small
+				width: 157px
+				height: 157px
+			.diamond-image	
+				&.big
+					width: 450px
+					height: 450px
+					top: -66px
+					left: -66px
+				&.small
+					width: 223px
+					height: 223px
+					top: -33px
+					left: -33px
+				&.radencode
+					background-image: url('../images/radencode-project_904.png')					
+				&.reflow
+					background-image: url('../images/reflow-project_790.png')
+				@for $i from 1 through length($positions-left)
+					$top: nth(nth($positions-left, $i), 1)
+					$left: nth(nth($positions-left, $i), 2)
+					&.image-#{$i}-left
+						background-position: #{-$left}px #{-$top}px				
+				@for $i from 1 through length($positions-right)
+					$top: nth(nth($positions-right, $i), 1)
+					$left: nth(nth($positions-right, $i), 2)
+					&.image-#{$i}-right
+						background-position: #{-$left}px #{-$top}px
