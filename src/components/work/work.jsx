@@ -16,7 +16,7 @@ const radencode = {
 	discription: 'Web portfolio that showcases my skills and experience through an elegant design and interactive examples.',
 	tags: [{id: 'radencode-react', name: 'React.js'}, {id: 'radencode-webpack', name: 'Webpack'}, {id: 'radencode-babel', name: 'Babel'}, {id: 'radencode-node', name: 'Node.js'}, {id: 'radencode-sass', name: 'Sass'}],
 	link: 'https://github.com/radencode/radencode.com',
-	image: 'radencode',
+	imageId: 'radencode',
 };
 
 const reflow = {
@@ -24,7 +24,7 @@ const reflow = {
 	discription: 'File management software that manages thousands of files and folders. Built with aesthetics in mind, reflow provides great user interface and user experience for the desktop environment.',
 	tags: [{id: 'reflow-react', name: 'React.js'}, {id: 'reflow-redux', name: 'Redux'}, {id: 'reflow-electron', name: 'Electron'}, {id: 'reflow-node', name: 'Node.js'}, {id: 'reflow-sass', name: 'Sass'}],
 	link: 'https://github.com/radencode/reflow',
-	image: 'reflow',
+	imageId: 'reflow',
 };
 
 const Work = () => {
