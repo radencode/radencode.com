@@ -14,10 +14,10 @@ const Project = props => {
 				<div class={'discription ' + pattern}>
 					<div class={'card ' + pattern}>
 						<div class={'line ' + pattern} data-aos='fade'></div>
-						<h1 id={'work-' + project.image + '-title'} data-aos='fade-up'>{project.title}</h1>
+						<h1 id={'work-' + project.imageId + '-title'} data-aos='fade-up'>{project.title}</h1>
 						<p data-aos='fade-up'>{project.discription}</p>
-						<ul id={'work-' + project.image + '-tags'} class='tags'>
-							{project.tags.map((tag, index) => <Tag key={tag.id} id={tag.id} name={tag.name} pattern={pattern} delay={index * 100} anchor={'#work-' + project.image + '-tags'}/> )}				
+						<ul id={'work-' + project.imageId + '-tags'} class='tags'>
+							{project.tags.map((tag, index) => <Tag key={tag.id} id={tag.id} name={tag.name} pattern={pattern} delay={index * 100} anchor={'#work-' + project.imageId + '-tags'}/> )}				
 						</ul>					
 					</div>
 					<a class='view-github' href={project.link} target='_blank' data-aos='fade' data-aos-delay={400}>View on github</a>
@@ -27,7 +27,7 @@ const Project = props => {
           	<div class='cut'></div>
 					</MediaQuery>
 					<MediaQuery query='(min-width: 1024px)'>
-          	<Grid name={project.title} image={project.image} direction={pattern}/>
+          	<Grid title={project.title} imageId={project.imageId} pattern={pattern}/>
 					</MediaQuery>						
 				</div>
 			</div>
