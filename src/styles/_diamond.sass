@@ -1,17 +1,17 @@
 @media screen and (min-width: 1024px)
-	$positions-left: 0 0, 244 61, 183 122, 122 183, 61 244, 183 244, 122 304, 61 365
-	$positions-right: 122 61, 122 0, 61 61, 0 122, 305 61, 122 244, 244 244, 61 305
+	$positions-left: 0 0, 62.93 252.73, 62.93 378.6, 125.87 189.8, 125.87 315.665, 188.8 126.87, 188.8 252.73, 251.73 63.43
+	$positions-right: 0 125.87, 62.93 62.93, 125.87 0, 125.87 62.935, 125.87 252.74, 62.93 315.665, 251.74 252.74, 314.675 62.93
 
 	.diamond-area
 		position: absolute
-		
+
 		&.big
-			width: 240px
-			height: 240px
-		
+			width: 246.07px
+			height: 246.07px
+
 		&.small
-			width: 118px
-			height: 118px
+			width: 120.21px
+			height: 120.21px
 
 		@for $i from 1 through length($positions-left)
 			$top: nth(nth($positions-left, $i), 1)
@@ -19,15 +19,14 @@
 			&.diamond-#{$i}-left
 				top: #{$top}px
 				left: #{$left}px
-			
-		
+
 		@for $i from 1 through length($positions-right)
 			$top: nth(nth($positions-right, $i), 1)
 			$left: nth(nth($positions-right, $i), 2)
 			&.diamond-#{$i}-right
 				top: #{$top}px
 				left: #{$left}px
-		
+
 		.diamond
 			overflow: hidden
 			position: absolute
@@ -36,43 +35,44 @@
 			+rotate_translate(-50%, -50%, 45deg)
 
 			&.big
-				width: 170px
-				height: 170px
-							
+				width: 174px
+				height: 174px
+
 			&.small
-				width: 84px
-				height: 84px
+				width: 85px
+				height: 85px
 
 			.diamond-image	
 				background-size: auto
 				background-repeat: no-repeat
 				position: absolute
 				+rotate(-45deg)
+				background-color: $blue
 
 				&.big
-					width: 240px
-					height: 240px
-					top: -35px
-					left: -35px
+					width: 246.07px
+					height: 246.07px
+					top: -36.035px
+					left: -36.035px
 
 				&.small
-					width: 118px
-					height: 118px
-					top: -17px
-					left: -17px
+					width: 120.21px
+					height: 120.21px
+					top: -17.605px
+					left: -17.605px
 
 				&.radencode
-					background-image: url('../images/radencode-project_484.png')
-					
+					background-image: url('../images/radencode-project_499.png')
+
 				&.reflow
-					background-image: url('../images/reflow-project_423.png')
+					background-image: url('../images/reflow-project_436.png')
 
 				@for $i from 1 through length($positions-left)
 					$top: nth(nth($positions-left, $i), 1)
 					$left: nth(nth($positions-left, $i), 2)
 					&.image-#{$i}-left
 						background-position: #{-$left}px #{-$top}px
-				
+
 				@for $i from 1 through length($positions-right)
 					$top: nth(nth($positions-right, $i), 1)
 					$left: nth(nth($positions-right, $i), 2)
@@ -80,15 +80,15 @@
 						background-position: #{-$left}px #{-$top}px
 
 @media screen and (min-width: 1600px)
-	$positions-left: 0 0, 454 113.5, 341 227.5, 227 340.5, 113.5 454, 341 454, 227 567.5, 113.5 681
-	$positions-right: 227 113.5, 227 0, 113.5 113.5, 0 227, 567.5 113.5, 227 454, 454 454, 113.5 567.5 
+	$positions-left: 0 0, 115.965 464.86, 115.965 696.79, 231.93 347.895, 231.93 580.825, 347.895 231.93, 347.895 464.86, 463.86 115.965 
+	$positions-right: 0 231.93, 115.965 115.965, 231.93 0, 231.93 115.965, 231.93 463.86, 115.965 579.825, 463.86 463.86, 579.825 115.965 
 	.diamond-area	
 		&.big
-			width: 450px
-			height: 450px		
+			width: 458.20px
+			height: 458.20px	
 		&.small
-			width: 223px
-			height: 223px
+			width: 226.27px
+			height: 226.27px
 		@for $i from 1 through length($positions-left)
 			$top: nth(nth($positions-left, $i), 1)
 			$left: nth(nth($positions-left, $i), 2)
@@ -100,34 +100,34 @@
 			$left: nth(nth($positions-right, $i), 2)
 			&.diamond-#{$i}-right
 				top: #{$top}px
-				left: #{$left}px		
+				left: #{$left}px	
 		.diamond
 			&.big
-				width: 318px
-				height: 318px							
+				width: 324px
+				height: 324px	
 			&.small
-				width: 157px
-				height: 157px
+				width: 160px
+				height: 160px
 			.diamond-image	
 				&.big
-					width: 450px
-					height: 450px
-					top: -66px
-					left: -66px
+					width: 458.20px
+					height: 458.20px
+					top: -67.10px
+					left: -67.10px
 				&.small
-					width: 223px
-					height: 223px
-					top: -33px
-					left: -33px
+					width: 226.27px
+					height: 226.27px
+					top: -33.135px
+					left: -33.135px
 				&.radencode
-					background-image: url('../images/radencode-project_904.png')					
+					background-image: url('../images/radencode-project_923.png')	
 				&.reflow
-					background-image: url('../images/reflow-project_790.png')
+					background-image: url('../images/reflow-project_807.png')
 				@for $i from 1 through length($positions-left)
 					$top: nth(nth($positions-left, $i), 1)
 					$left: nth(nth($positions-left, $i), 2)
 					&.image-#{$i}-left
-						background-position: #{-$left}px #{-$top}px				
+						background-position: #{-$left}px #{-$top}px	
 				@for $i from 1 through length($positions-right)
 					$top: nth(nth($positions-right, $i), 1)
 					$left: nth(nth($positions-right, $i), 2)

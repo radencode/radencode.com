@@ -1,0 +1,73 @@
+.field
+	position: relative
+	margin-bottom: 30px
+	&:nth-child(4)
+		margin-bottom: 0
+
+	.anchor
+		position: relative
+		width: 220px
+		height: auto
+
+		label
+			position: absolute
+			top: 5px
+			letter-spacing: 0.15em
+			font-size: 10px
+			transition: 250ms all ease
+			cursor: text
+			&.small
+				font-size: 7px
+				color: $gray
+				top: -5px
+
+		input, textarea
+			background-color: transparent
+			width: 220px
+			border-radius: 0
+			border: none
+			border-bottom: 1px solid #dbdcde
+			vertical-align: top
+			outline: none
+			padding: 5px 0
+			margin: 0
+			+appearance(none)
+			font-family: Esphimere-Bold
+			text-transform: uppercase
+			font-size: 10px
+			color: $blue
+			overflow: hidden
+		
+		textarea
+			word-wrap: break-word
+			resize: none
+
+		.status
+			width: 220px
+			height: 1px
+			position: absolute
+			bottom: 0
+
+			.bar
+				height: 1px
+				position: absolute
+				top: 0
+				left: 50%
+				+translate(-50%, 0) 
+				transition: 500ms all ease
+				&.idle
+					width: 0
+				&.active
+					width: 100%
+					background-color: $blue
+				&.error
+					width: 100%
+					background-color: $error
+					transition-delay: 250ms
+
+	.errorMessage
+		position: absolute
+		bottom: -12px
+		font-size: 10px
+		color: $error
+		text-transform: none

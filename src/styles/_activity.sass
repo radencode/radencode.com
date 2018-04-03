@@ -1,0 +1,529 @@
+.activity
+	position: absolute
+
+	&.small
+		width: 84.85px
+		height: 84.85px
+
+	&.big
+		width: 190.92px
+		height: 190.92px
+
+	&.hockey
+		top: 0
+		left: 106.06px
+
+	&.skiing
+		top: 53.03px
+		left: 53.03px
+
+	&.tennis
+		top: 53.03px
+		left: 159.09px
+
+	&.cooking
+		top: 106.06px
+		left: 0
+
+	&.hiking
+		top: 106.06px
+		left: 53.03px
+
+	&.pool
+		top: 106.06px
+		left: 212.12px
+
+	&.traveling
+		top: 212.12px
+		left: 0px
+	
+	&.filming
+		top: 212.12px
+		left: 212.12px
+
+	&.eating
+		top: 265.15px
+		left: 53.03px
+
+	&.gaming
+		top: 265.15px
+		left: 159.09px
+	
+	&.cards
+		top: 318.19px
+		left: 106.06px
+
+	&.hockey, &.skiing, &.tennis, &.cooking, &.pool, &.hiking, &.traveling, &.filming, &.eating, &.gaming, &.cards
+		.activity-cutout
+			overflow: hidden
+			position: absolute
+			left: 50%
+			top: 50%			
+			transition: 1s transform ease-in, 1s opacity ease-in, 1s visibility ease-in				
+
+			&.animated-in
+				opacity: 1
+				visibility: visible
+				+rotate_translate_scale(1, -50%, -50%, 45deg)
+
+			&.animated-out
+				opacity: 0
+				visibility: hidden
+				+rotate_translate_scale(0, 50%, 50%, 0deg)
+
+			&.small
+				width: 60px
+				height: 60px
+
+			&.big
+				width: 135px
+				height: 135px
+
+			.activity-coding, .activity-image
+				background-repeat: no-repeat
+				background-size: auto
+				+filter(100%)
+				position: absolute
+				+rotate(-45deg)
+
+				&.small
+					width: 84.85px
+					height: 84.85px
+					top: -12.425px
+					left: -12.425px
+
+				&.big
+					width: 190.92px
+					height: 190.92px
+					top: -27.96px
+					left: -27.96px
+			.activity-coding
+				background-image: url('../images/coding_404.png')
+			.activity-image
+				background-position: left top
+
+	&.hockey
+		.activity-coding
+			background-position: -106.06px 0px
+		.activity-image
+			background-image: url('../images/activity_hockey_85.png')
+
+	&.skiing
+		.activity-coding
+			background-position: -53.03px -53.03px
+		.activity-image
+			background-image: url('../images/activity_skiing_85.png')	
+
+	&.tennis
+		.activity-coding
+			background-position: -159.09px -53.03px
+		.activity-image
+			background-image: url('../images/activity_tennis_85.png')
+
+	&.cooking
+		.activity-coding
+			background-position: 0px -106.06px
+		.activity-image
+			background-image: url('../images/activity_cooking_85.png')
+
+	&.pool
+		.activity-coding
+			background-position: -212.12px -106.06px
+		.activity-image
+			background-image: url('../images/activity_pool_85.png')
+
+	&.hiking
+		.activity-cutout
+			.activity-coding
+				background-position: -53.03px -106.06px
+				+filter(0%)
+			.activity-image
+				background-image: url('../images/activity_hiking_191.png')
+				+filter(0%)
+
+	&.traveling
+		.activity-coding
+			background-position: 0px -212.12px
+		.activity-image
+			background-image: url('../images/activity_traveling_85.png')
+
+	&.filming
+		.activity-coding
+			background-position: -212.12px -212.12px
+		.activity-image
+			background-image: url('../images/activity_filming_85.png')
+
+	&.eating
+		.activity-coding
+			background-position: -53.03px -265.15px
+		.activity-image
+			background-image: url('../images/activity_eating_85.png')
+
+	&.gaming
+		.activity-coding
+			background-position: -159.09px -265.15px
+		.activity-image
+			background-image: url('../images/activity_gaming_85.png')
+
+	&.cards
+		.activity-coding
+			background-position: -106.06px -318.19px
+		.activity-image
+			background-image: url('../images/activity_cards_85.png')
+
+@media screen and (min-width: 600px)
+	.activity
+		&.small
+			width: 127.28px
+			height: 127.28px
+		&.big
+			width: 275.77px
+			height: 275.77px
+		&.hockey
+			top: 0
+			left: 148.49px
+		&.skiing
+			top: 74.245px
+			left: 74.245px
+		&.tennis
+			top: 74.245px
+			left: 222.735px
+		&.cooking
+			top: 148.49px
+			left: 0
+		&.hiking
+			top: 148.49px
+			left: 74.245px
+		&.pool
+			top: 148.49px
+			left: 296.98px
+		&.traveling
+			top: 296.98px
+			left: 0px		
+		&.filming
+			top: 296.98px
+			left: 296.98px
+		&.eating
+			top: 371.225px
+			left: 74.245px
+		&.gaming
+			top: 371.225px
+			left: 222.735px		
+		&.cards
+			top: 445.47px
+			left: 148.49px
+		&.hockey, &.skiing, &.tennis, &.cooking, &.pool, &.hiking, &.traveling, &.filming, &.eating, &.gaming, &.cards
+			.activity-cutout		
+				&.small
+					width: 90px
+					height: 90px
+				&.big
+					width: 195px
+					height: 195px	
+				.activity-coding, .activity-image
+					&.small
+						width: 127.28px
+						height: 127.28px
+						top: -18.64px
+						left: -18.64px
+					&.big
+						width: 275.77px
+						height: 275.77px
+						top: -40.385px
+						left: -40.385px
+				.activity-coding
+					background-image: url('../images/coding_425.png')
+		&.hockey
+			.activity-coding
+				background-position: -148.49px 0px
+			.activity-image
+				background-image: url('../images/activity_hockey_128.png')
+		&.skiing
+			.activity-coding
+				background-position: -74.245px -74.245px
+			.activity-image
+				background-image: url('../images/activity_skiing_128.png')	
+		&.tennis
+			.activity-coding
+				background-position: -222.735px -74.245px
+			.activity-image
+				background-image: url('../images/activity_tennis_128.png')
+		&.cooking
+			.activity-coding
+				background-position: 0px -148.49px
+			.activity-image
+				background-image: url('../images/activity_cooking_128.png')
+		&.pool
+			.activity-coding
+				background-position: -296.98px -148.49px
+			.activity-image
+				background-image: url('../images/activity_pool_128.png')
+		&.hiking
+			.activity-cutout
+				.activity-coding
+					background-position: -74.245px -148.49px
+				.activity-image
+					background-image: url('../images/activity_hiking_276.png')
+		&.traveling
+			.activity-coding
+				background-position: 0px -296.98px
+			.activity-image
+				background-image: url('../images/activity_traveling_128.png')
+		&.filming
+			.activity-coding
+				background-position: -296.98px -296.98px
+			.activity-image
+				background-image: url('../images/activity_filming_128.png')
+		&.eating
+			.activity-coding
+				background-position: -74.245px -371.225px
+			.activity-image
+				background-image: url('../images/activity_eating_128.png')
+		&.gaming
+			.activity-coding
+				background-position: -222.735px -371.225px
+			.activity-image
+				background-image: url('../images/activity_gaming_128.png')
+		&.cards
+			.activity-coding
+				background-position: -148.49px -445.47px
+			.activity-image
+				background-image: url('../images/activity_cards_128.png')
+
+@media screen and (min-width: 1024px)
+	.activity
+		&.small
+			width: 169.71px
+			height: 169.71px
+		&.big
+			width: 360.62px
+			height: 360.62px
+		&.hockey
+			top: 0
+			left: 381.84px
+		&.skiing
+			top: 95.46px
+			left: 286.38px
+		&.tennis
+			top: 95.46px
+			left: 477.30px
+		&.cooking
+			top: 190.92px
+			left: 190.92px
+		&.hiking
+			top: 190.92px
+			left: 286.38px
+		&.pool
+			top: 190.92px
+			left: 572.76px
+		&.traveling
+			top: 286.38px
+			left: 95.46px		
+		&.filming
+			top: 286.38px
+			left: 668.22px
+		&.eating
+			top: 381.84px
+			left: 0px
+		&.gaming
+			top: 381.84px
+			left: 763.68px		
+		&.cards
+			top: 572.76px
+			left: 381.84px
+		&.hockey, &.skiing, &.tennis, &.cooking, &.pool, &.hiking, &.traveling, &.filming, &.eating, &.gaming, &.cards
+			.activity-cutout		
+				&.small
+					width: 120px
+					height: 120px
+				&.big
+					width: 255px
+					height: 255px	
+				.activity-coding, .activity-image
+					&.small
+						width: 169.71px
+						height: 169.71px
+						top: -24.85px
+						left: -24.85px
+					&.big
+						width: 360.62px
+						height: 360.62px
+						top: -52.81px
+						left: -52.81px
+				.activity-coding
+					background-image: url('../images/coding_934.png')
+		&.hockey
+			.activity-coding
+				background-position: -381.84px 0px
+			.activity-image
+				background-image: url('../images/activity_hockey_170.png')
+		&.skiing
+			.activity-coding
+				background-position: -286.38px -95.46px
+			.activity-image
+				background-image: url('../images/activity_skiing_170.png')	
+		&.tennis
+			.activity-coding
+				background-position: -477.30px -95.46px
+			.activity-image
+				background-image: url('../images/activity_tennis_170.png')
+		&.cooking
+			.activity-coding
+				background-position: -190.92px -190.92px
+			.activity-image
+				background-image: url('../images/activity_cooking_170.png')
+		&.pool
+			.activity-coding
+				background-position: -572.76px -190.92px
+			.activity-image
+				background-image: url('../images/activity_pool_170.png')
+		&.hiking
+			.activity-cutout
+				.activity-coding
+					background-position: -286.38px -190.92px
+				.activity-image
+					background-image: url('../images/activity_hiking_361.png')
+		&.traveling
+			.activity-coding
+				background-position: -95.46px -286.38px
+			.activity-image
+				background-image: url('../images/activity_traveling_170.png')
+		&.filming
+			.activity-coding
+				background-position: -668.22px -286.38px
+			.activity-image
+				background-image: url('../images/activity_filming_170.png')
+		&.eating
+			.activity-coding
+				background-position: 0px -381.84px
+			.activity-image
+				background-image: url('../images/activity_eating_170.png')
+		&.gaming
+			.activity-coding
+				background-position: -763.68px -381.84px
+			.activity-image
+				background-image: url('../images/activity_gaming_170.png')
+		&.cards
+			.activity-coding
+				background-position: -381.84px -572.76px
+			.activity-image
+				background-image: url('../images/activity_cards_170.png')
+				
+@media screen and (min-width: 1600px)
+	.activity
+		&.small
+			width: 226.27px
+			height: 226.27px
+		&.big
+			width: 473.76px
+			height: 473.76px
+		&.hockey
+			top: 0
+			left: 494.96px
+		&.skiing
+			top: 123.74px
+			left: 371.22px
+		&.tennis
+			top: 123.74px
+			left: 618.7px
+		&.cooking
+			top: 247.48px
+			left: 247.48px
+		&.hiking
+			top: 247.48px
+			left: 371.22px
+		&.pool
+			top: 247.48px
+			left: 742.44px
+		&.traveling
+			top: 371.22px
+			left: 123.74px		
+		&.filming
+			top: 371.22px
+			left: 866.18px
+		&.eating
+			top: 494.96px
+			left: 0px
+		&.gaming
+			top: 494.96px
+			left: 989.92px		
+		&.cards
+			top: 742.44px
+			left: 494.96px
+		&.hockey, &.skiing, &.tennis, &.cooking, &.pool, &.hiking, &.traveling, &.filming, &.eating, &.gaming, &.cards
+			.activity-cutout		
+				&.small
+					width: 160px
+					height: 160px
+				&.big
+					width: 335px
+					height: 335px	
+				.activity-coding, .activity-image
+					&.small
+						width: 226.27px
+						height: 226.27px
+						top: -33.135px
+						left: -33.135px
+					&.big
+						width: 473.76px
+						height: 473.76px
+						top: -69.38px
+						left: -69.38px
+				.activity-coding
+					background-image: url('../images/coding_1217.png')
+		&.hockey
+			.activity-coding
+				background-position: -494.96px 0px
+			.activity-image
+				background-image: url('../images/activity_hockey_227.png')
+		&.skiing
+			.activity-coding
+				background-position: -371.22px -123.74px
+			.activity-image
+				background-image: url('../images/activity_skiing_227.png')	
+		&.tennis
+			.activity-coding
+				background-position: -618.7px -123.74px
+			.activity-image
+				background-image: url('../images/activity_tennis_227.png')
+		&.cooking
+			.activity-coding
+				background-position: -247.48px -247.48px
+			.activity-image
+				background-image: url('../images/activity_cooking_227.png')
+		&.pool
+			.activity-coding
+				background-position: -742.44px -247.48px
+			.activity-image
+				background-image: url('../images/activity_pool_227.png')
+		&.hiking
+			.activity-cutout
+				.activity-coding
+					background-position: -371.22px -247.48px
+				.activity-image
+					background-image: url('../images/activity_hiking_474.png')
+		&.traveling
+			.activity-coding
+				background-position: -123.74px -371.22px
+			.activity-image
+				background-image: url('../images/activity_traveling_227.png')
+		&.filming
+			.activity-coding
+				background-position: -866.18px -371.22px
+			.activity-image
+				background-image: url('../images/activity_filming_227.png')
+		&.eating
+			.activity-coding
+				background-position: 0px -494.96px
+			.activity-image
+				background-image: url('../images/activity_eating_227.png')
+		&.gaming
+			.activity-coding
+				background-position: -989.92px -494.96px
+			.activity-image
+				background-image: url('../images/activity_gaming_227.png')
+		&.cards
+			.activity-coding
+				background-position: -494.96px -742.44px
+			.activity-image
+				background-image: url('../images/activity_cards_227.png')

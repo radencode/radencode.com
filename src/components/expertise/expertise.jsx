@@ -7,8 +7,6 @@ import Discription from 'global/discription.jsx';
 import LightBulb from 'expertise/lightbulb.jsx';
 import Square from 'global/square.jsx';
 import Title from 'global/title.jsx';
-//Assets
-import ParticlesConfig from 'particles-config-body.json';
 
 const lightBulbData = [
   {
@@ -65,16 +63,13 @@ const renderLightBulbs = (list, start, end) => {
 
 const Expertise = () => {
   return (
-    <section id='expertise'>
-      <MediaQuery query='(min-width: 1024px)'>
-        <Particles params={ParticlesConfig} style={{width: '100%', height: '100%', position: 'absolute', top: '0px', left: '0px'}}/>		
-      </MediaQuery>        
+    <section id='expertise'>      
       <MediaQuery query='(min-width: 1600px)'>
         <Square size='big' angle='thirty-right' settings={{top: '800px', right: '-1000px', borderColor: '#F3F3F3'}}/>
         <Square size='big' angle='fifteen-left' settings={{top: '400px', left: '-900px', borderColor: '#F3F3F3'}}/>		
       </MediaQuery>
       <Title title='Expertise' subTitle={'This is how I create & build'}/>
-      <Discription id='expertise-anchor' discription='I love to create eye catching and easy to use applications that provide a great user experience. I specialize in developing with React.js/Redux and RESTful APIs as a backend to my applications. Developing web applications is more than a job to me; it is a hobby. Although I always strive for the end product with customer satisfaction at highest priority, it is the collection of experiences gained over time that drives me. Oh... and did I mention I love JavaScript?!'/>
+      <Discription id='expertise-anchor' discription='I apply a meaning to an idea by creating simplistic and aesthetically pleasing solutions that are accessible and functional to the end user. My top priority when engineering a product or design is always the target customer and its intended use. Even the most impressive or eye catching products can be irrelevant if they can’t be used effectively. I aim to find the middle ground between making something beautiful but also easily usable.'/>
       <div id="lightbulb-container">
         <MediaQuery query='(max-width: 1599px)'>
           {renderLightBulbs(lightBulbData, 0, 4)}

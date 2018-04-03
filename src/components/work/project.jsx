@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 //Components
+import Anchor from 'global/anchor.jsx';
 import Tag from 'work/tag.jsx';
 import Grid from 'work/grid.jsx';
 
@@ -20,7 +21,13 @@ const Project = props => {
 							{project.tags.map((tag, index) => <Tag key={tag.id} id={tag.id} name={tag.name} pattern={pattern} delay={index * 100} anchor={'#work-' + project.imageId + '-tags'}/> )}				
 						</ul>					
 					</div>
-					<a class='view-github' href={project.link} target='_blank' data-aos='fade' data-aos-delay={400}>View on github</a>
+					<div class='view-github' data-aos='fade' data-aos-delay={400}>
+						<Anchor type='top-left' color='dark-blue' animation={false}/>
+						<Anchor type='top-right' color='dark-blue' animation={false}/>
+						<Anchor type='bottom-right' color='dark-blue' animation={false}/>
+						<Anchor type='bottom-left' color='dark-blue' animation={false}/>
+						<a href={project.link} target='_blank'>View on github</a>
+					</div>
 				</div>
 				<div class={'image ' + pattern + ' ' + project.title}>
 					<MediaQuery query='(max-width: 1023px)'>

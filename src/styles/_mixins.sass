@@ -47,6 +47,13 @@
   -ms-transform:     rotate($deg)
   transform:         rotate($deg)
 
+=scale($factor)
+  -webkit-transform: scale($factor)
+  -moz-transform:    scale($factor)
+  -o-transform:      scale($factor)
+  -ms-transform:     scale($factor)
+  transform:         scale($factor)
+
 =translate($x, $y)
   -webkit-transform: translate($x, $y)
   -moz-transform:    translate($x, $y)
@@ -60,6 +67,13 @@
   -o-transform:      translate($x, $y) rotate($deg)
   -ms-transform:     translate($x, $y) rotate($deg)
   transform:         translate($x, $y) rotate($deg)
+
+=rotate_translate_scale($factor, $x, $y, $deg)
+  -webkit-transform: scale($factor) translate($x, $y) rotate($deg)
+  -moz-transform:    scale($factor) translate($x, $y) rotate($deg)
+  -o-transform:      scale($factor) translate($x, $y) rotate($deg)
+  -ms-transform:     scale($factor) translate($x, $y) rotate($deg)
+  transform:         scale($factor) translate($x, $y) rotate($deg)
 
 =origin($x, $y)
   -webkit-transform-origin: $x $y
@@ -117,3 +131,12 @@
   -o-animation-fill-mode:      $mode
   -ms-animation-fill-mode:     $mode
   animation-fill-mode:         $mode
+
+=filter($amount)
+  -webkit-filter: grayscale($amount)
+  filter:         grayscale($amount)
+
+=appearance($value)
+   -webkit-appearance: $value
+   -moz-appearance:    $value
+   appearance:         $value

@@ -14,7 +14,7 @@ class App extends React.Component {
 	constructor(props){
 		super(props)
 		AOS.init({
-			duration: 1000,
+			duration: 800,
 			offset: 100
 		});
 		this.state = {loading: true};

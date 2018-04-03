@@ -51,19 +51,26 @@
 			display: inline-block
 			background-color: $white
 			margin: 25px 0 50px 0
+			padding: 15px 0
 			position: relative
 			left: 50%
-			+translate(-50%, 0)
-			padding: 10px 20px
-			border: none
-			+box-shadow(0, 0, 16px, $light-gray)
+			+translate(-50%, 0)			
+			border: 1px solid $light-gray
 			font-family: Esphimere-Bold
 			font-size: 10px
 			letter-spacing: 0.25em
 			text-transform: uppercase
-			color: $blue
-			cursor: pointer
-			white-space: nowrap			
+			color: $dark-blue			
+			white-space: nowrap	
+			&:hover
+				background-color: $square-gray-light
+
+			a
+				cursor: pointer
+				padding: 15px 25px
+				&:hover
+					color: $blue
+
 			
 	.image
 		width: 240px
@@ -104,7 +111,7 @@
 					font-size: 13px		
 			.view-github
 				margin: 35px 0 60px 0
-				font-size: 13px
+				font-size: 11px
 		.image
 			width: 400px
 			&.Radencode
@@ -199,10 +206,10 @@
 				h1
 					font-size: 50px
 				p
-					font-size: 15px		
+					font-size: 13px		
 			.view-github
-				bottom: 30px
-				font-size: 15px
+				bottom: 50px
+				font-size: 13px
 		.image
 			width: 650px
 			height: 640px

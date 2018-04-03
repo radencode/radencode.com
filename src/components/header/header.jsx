@@ -31,11 +31,11 @@ export default class Header extends React.PureComponent {
 					<div id='menu'>
 						<nav>
 							<ul>
-								<li data-aos='fade-down' data-aos-anchor='#header'><span>Expertise</span></li>
-								<li data-aos='fade-down' data-aos-delay='200' data-aos-anchor='#header'><span>Skills</span></li>
-								<li data-aos='fade-down' data-aos-delay='400' data-aos-anchor='#header'><span>Work</span></li>
-								<li data-aos='fade-down' data-aos-delay='800' data-aos-anchor='#header'><span>About</span></li>
-								<li data-aos='fade-down' data-aos-delay='1000' data-aos-anchor='#header'><span>Get In Touch</span></li>
+								<li data-aos='fade-down' data-aos-anchor='#header'><a href='#expertise'>Expertise</a></li>
+								<li data-aos='fade-down' data-aos-delay='200' data-aos-anchor='#header'><a href='#skills'>Skills</a></li>
+								<li data-aos='fade-down' data-aos-delay='400' data-aos-anchor='#header'><a href='#work'>Work</a></li>
+								<li data-aos='fade-down' data-aos-delay='800' data-aos-anchor='#header'><a href='#about'>About</a></li>
+								<li data-aos='fade-down' data-aos-delay='1000' data-aos-anchor='#header'><a href='https://www.linkedin.com/in/radencode' target='_blank'>Get In Touch</a></li>
 							</ul>
 						</nav>
 					</div>

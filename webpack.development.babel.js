@@ -9,6 +9,11 @@ export default merge(config ,{
         inline: true,
         port: 8080,
         host: '0.0.0.0',
+        proxy: {
+            '/radencode': {
+                target: 'http://localhost:3001',
+            }
+        },
         stats: {
             chunkModules: false
         }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.development.babel.js",
+    "test": "react-scripts start",
     "build": "webpack --config webpack.production.babel.js"
   },
   "repository": {
@@ -22,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "aos": "^2.2.0",
+    "axios": "^0.17.1",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

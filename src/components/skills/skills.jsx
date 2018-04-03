@@ -9,9 +9,6 @@ import Skillset from 'skills/skillset.jsx';
 import Square from 'global/square.jsx';
 import Title from 'global/title.jsx';
 
-//Assets
-import ParticlesConfig from 'particles-config-body.json';
-
 const frontEndSkills = {
 	skillset: 'Front-End',
 	key: 1,
@@ -70,30 +67,30 @@ const backEndSkills = {
 	skillList: [
 		{
 			name: 'C++',
-			years: 5,
+			years: 3,
 			tag: 'Years',
-			skilllevel: '70%',
+			skilllevel: '60%',
 			id: 'cpp',
 		},
 		{
-			name: 'PHP',
-			years: 2,
-			tag: 'Years',
-			skilllevel: '60%',
-			id: 'php',
+			name: 'Express.js',
+			years: 1,
+			tag: 'Year',
+			skilllevel: '30%',
+			id: 'express',
 		},
 		{
-			name: 'MySQL',
-			years: 2,
-			tag: 'Years',
-			skilllevel: '55%',
-			id: 'mysql',
+			name: 'MongoDB',
+			years: 1,
+			tag: 'Year',
+			skilllevel: '25%',
+			id: 'mongo',
 		},
 		{
 			name: 'Node.js',
 			years: 1,
 			tag: 'Year',
-			skilllevel: '40%',
+			skilllevel: '50%',
 			id: 'node',
 		},
 		{
@@ -158,22 +155,22 @@ const devToolSkills = {
 
 const Skills = () => {
 	return (
-		<section id='skills'>
-			<MediaQuery query='(min-width: 1024px)'>
-				<Particles params={ParticlesConfig} style={{width: '100%', height: '100%', position: 'absolute', top: '0px', left: '0px'}}/>		
-			</MediaQuery>
-			<Title title='Skills' subTitle='I always strive for the better'/>
-			<Discription id='skills-anchor' discription='I thrive in a challenging environment that requires quick thinking and problem solving skills. I love to learn and continue to practice with the latest technology in hopes of achieving my personal goals as well as better my skills.'/>
-			<div id='skill-path'>
-				<MediaQuery query='(min-width: 1600px)'>
-					<Square size='big' angle='forty-five' settings={{top: '717px', left: '-188px', borderColor: '#F8F8F8'}}/>		
+		<section id="skills">
+			<Title title="Skills" subTitle="I always strive for the better" />
+			<Discription
+				id="skills-anchor"
+				discription="I thrive in a challenging environment that requires quick thinking and problem solving skills. I love to learn and continue to practice with the latest technology in hopes of achieving my personal goals as well as better my skills."
+			/>
+			<div id="skill-path">
+				<MediaQuery query="(min-width: 1600px)">
+					<Square size="big" angle="forty-five" settings={{ top: '717px', left: '-188px', borderColor: '#F8F8F8' }} />
 				</MediaQuery>
-				<Skillset skillData={frontEndSkills}/>
-				<Skillset skillData={backEndSkills}/>
-				<Skillset skillData={devToolSkills}/>
+				<Skillset skillData={frontEndSkills} />
+				<Skillset skillData={backEndSkills} />
+				<Skillset skillData={devToolSkills} />
 			</div>
 		</section>
 	);
-}
+};
 
 export default Skills;
