@@ -19,6 +19,9 @@
     "teddy",
     "radenkov"
   ],
+  "engines": {
+    "node": "12.22.12"
+  },
   "author": "Teddy Radenkov",
   "license": "MIT",
   "dependencies": {
