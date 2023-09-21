@@ -1,2 +1,35 @@
+# Logs
+logs
+*.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Compiled binary addons
+build/Release
+
+# Dependency directory
 node_modules
+
+# Builds
+dist
+build
 app
+
+# IDEA/Webstorm project files
+.idea
+*.iml
+
+#VSCode metadata
+.vscode
+
+# Mac files
+.DS_Store
+
+# Environments
+.env
