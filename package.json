@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.development.babel.js",
-    "test": "react-scripts start",
-    "build": "webpack --config webpack.production.babel.js"
+    "build": "webpack --config webpack.production.babel.js",
+    "serve": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "babel-register": "^6.26.0",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
+    "express": "^4.18.2",
     "file-loader": "^1.1.5",
     "html-webpack-plugin": "^2.30.1",
     "json-loader": "^0.5.7",
