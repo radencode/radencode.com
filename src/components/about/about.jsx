@@ -4,7 +4,7 @@ import Particles from 'react-particles-js';
 import React from 'react';
 
 //Components
-import Activity from 'about/Activity.jsx';
+import Activity from 'about/activity.jsx';
 import Anchor from 'global/anchor.jsx';
 import Discription from 'global/discription.jsx';
 import Square from 'global/square.jsx';

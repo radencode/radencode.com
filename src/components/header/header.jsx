@@ -4,7 +4,7 @@ import Particles from 'react-particles-js';
 import React from 'react';
 
 //Components
-import Main from 'header/Main.jsx';
+import Main from 'header/main.jsx';
 import MobileMenu from 'header/mobileMenu.jsx';
 import SocialMedia from 'header/socialMedia.jsx';
 
